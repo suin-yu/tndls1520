@@ -17,9 +17,7 @@ button:focus {outline: none;}
     .menuOpen {display: none;}
     .inner-header .gnb {width: 30%;}
     .inner-header .tnb {width: 12%;}
-    .product-title {position: absolute; top: 19.5%; right: 15%;}
-    .product-title.tea {right: 16%;}
-    .product-title.egg {right: 14%;}
+    .product-title {position: absolute; top: 65%; right:-25%;}
     .model .model-inner .right-txt {top: 2%;}
     .model .model-inner .middle .vertical {bottom: 58%;}
     .model .model-inner .bottom {margin: 1100px auto 80px;}
@@ -39,7 +37,7 @@ button:focus {outline: none;}
 
 @media screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
     .skin-concern {
-        height: 100vh;
+        height: 280vh;
         padding: 100px 0 0;
     }
 }
@@ -56,17 +54,8 @@ button:focus {outline: none;}
     /* .intro {padding: 280px 0 0; height: 52vh;} */
     .intro .intro-inner {margin: 0 auto; width: 100%; height: 142px; text-align: center;}
 
-    .scroll-container {max-width: 100%; height: auto;}
-    .scroll-item {height: auto; min-height: 100vh; position:relative; overflow: hidden; display: block;}
-    .scroll-item__inner {display: flex; flex-direction: column; height: auto; overflow: hidden;}
-    .scroll-item .left-sticky {width: 100%; height: 70vh;}
-    .right-content {width: 100%; height: 768px; padding-top: 0; padding-bottom: 0; overflow-y: scroll; overflow-x: hidden; -webkit-overflow-scrolling: touch; -ms-overflow-style: none;  scrollbar-width: none; z-index: 3;} 
-    .right-content::-webkit-scrollbar {display: none;}
-    .scroll-item .right-content ul {height: auto; padding: 1300px 200px 200px;}
-    .product-list li {margin-bottom: 150px; display: block;}
-    .product-title {top: 81%; right: 36%;}
-    .product-title.tea {right: 37%;}
-    .product-title.egg {right: 35%;}
+    .left-sticky {width: 50%; height: 100vh; position: relative; overflow: hidden;}
+    .product-list {position: relative; width: 300px; height: 300px; transform-style: preserve-3d;}
 
     .model .model-inner {margin: 250px auto 40px;}
     .model .model-inner .top {width: 95%; margin-bottom: 0px;}
@@ -74,7 +63,7 @@ button:focus {outline: none;}
     .model .model-inner .top .wind {width: 42%; padding-top: 64%;}
     .model .model-inner .right-txt {right: 60px; top: 30%;}
     .model .model-inner .middle {width: 90%;}
-    .model .model-inner .middle .vertical {width: 18%; top: 17%; left: 12%; animation: verticalAni 4s ease-out forwards;}
+    .model .model-inner .middle .vertical {width: 18%; top: 16%; left: 12%; animation: verticalAni 4s ease-out forwards;}
     .model .model-inner .middle .her {width: 65%;; top: 37%;}
     .model .model-inner .bottom {width: 90%; margin: 1300px auto 120px;}
     .model .model-inner .bottom .renewal {width: 80%; margin: auto;}
@@ -85,6 +74,7 @@ button:focus {outline: none;}
 
     .moving-txt .marquee {font-size: 280px;}
 
+    .skin-concern {background: #1a1a1e !important;}
     .skin-concern {padding: 200px 0 310px; height: 380vh;}
     .skin-concern .concern-inner {max-width: 1024px;}
     .skin-concern .concern-inner .text-box {width: 90%;}
@@ -115,7 +105,8 @@ button:focus {outline: none;}
     .day6 .day-inner .left .textbox .txt .index1024::before {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
     .day6 .day-inner .left h2.tit {font-size: 50px; line-height: 110%;} 
     .day6 .day-inner .left p.txt {font-size: 22px; margin-top: 0px;}
-    .day6 .day-inner .left p.txt .hide1024 {display: none;}
+    .day6 .day-inner .left p.txt br {display: none;}
+    .day6 .day-inner .left p.txt b {display: inline;}
     .day6 .day-inner .left p.txt::before {content: "\A"; white-space: pre;}
     .day6 .day-inner .right {width: 55%; margin-top: 0;}
     .day6 .day-inner .right img {width: 493px; height: 662px; margin-top: 75%;}
@@ -177,26 +168,32 @@ button:focus {outline: none;}
     .intro .intro-inner .txt .index390::before {content: "\A"; white-space: pre; display: block;}
     .intro .intro-inner .txt br {display: none;}
 
-    .scroll-container {max-width: 100%; height: 7032px;}
-    .scroll-item {height: auto; min-height: 100vh; position:relative; overflow: hidden; display: block;}
-    .scroll-item__inner {display: flex; flex-direction: column; height: auto; overflow: hidden;}
-    .scroll-item .left-sticky {width: 100%; height: 576px;}
-    .right-content {width: 100%; height: 1768px;} 
-    .scroll-item .right-content {overflow: visible;}
-    .scroll-item .right-content ul {height: auto; padding: 200px 200px 150px;}
-    .product-title {top: 28%; right: 32%;}
-    .product-title.tea {right: 33%;}
-    .product-title.egg {right: 29%;}
+    .scroll-container {height: auto; margin-bottom: -300px;}
+    .scroll-item {height: auto;}
+    .scroll-item__inner {display: flex; flex-direction: column; width: 100%; height: auto;}
+    .left-sticky {width: 100%; height: 40vh; position: sticky; top: 0; z-index: 10;}
+    .img-wrap {height: 100%; display: flex; justify-content: center; align-items: center;}
+    .right-content {width: 100%; height: 60vh; scroll-snap-type: y mandatory;}
+    .product-list {display: flex; flex-direction: column; align-items: center; display: block;}
+    .product-list li {position: relative; top: auto; left: autl; transform: none; visibility: visible; width: 100%; height: 60vh; display: flex; justify-content: center; align-items: center; scroll-snap-align: center; scroll-snap-stop: always; margin-bottom: 10px;}
+    .product-list li a {display: block; width: 300px; height: 300px;}
+    .product-list li img {width: 100%; height: 100%; object-fit: contain;}
+    .product-title {font-size: 150px; top: 77%; left: 0%;}
+    .scroll-container + section {
+        position: relative;
+        z-index: 5;
+    }
 
-    .model .model-inner {width: 100%; margin: 250px auto 40px;}
+    .model {background: #F0E5E0 !important;}
+    .model .model-inner {width: 100%; margin: 360px auto 40px; padding-top: 200px;}
     .model .model-inner .top {width: 90%; margin: 0 auto; margin-bottom: 0px;}
-    .model .model-inner .right-txt {top: 24%; left: 0%; text-align: center;}
+    .model .model-inner .right-txt {top: 29%; left: 0%; text-align: center;}
     .model .model-inner .right-txt .tit .index768::before {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
     .model .model-inner .right-txt .txt .index768::before {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
     .model .model-inner .middle {width: 90%;}
-    .model .model-inner .middle .vertical {width: 20%; top: 12%; left: 2%;}
-    .model .model-inner .middle .her {width: 70%; top: 35.5%; right: 5%;}
-    .model .model-inner .bottom {width: 90%; margin: 1450px auto 80px;}
+    .model .model-inner .middle .vertical {width: 18%; top: 16.5%; left:4%;}
+    .model .model-inner .middle .her {width: 70%; top: 39.5%; right: 5%;}
+    .model .model-inner .bottom {width: 90%; margin: 1250px auto 80px;}
     .model .model-inner .bottom .renewal {margin-top: 200px; width: 100%; margin: auto;}
     .model .model-inner .bottom .txt .index768::before {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
 
@@ -229,18 +226,32 @@ button:focus {outline: none;}
     .theraphy ul li .txt-box p {font-size: 20px;}
     .theraphy ul li {width: auto; margin-right: 100px;}
 
-    .day6 .day-inner {display: flex; flex-direction: column; align-items: center; margin: 0 auto 100px; height: 1878px;}
+    .day6 {background: #F0E5E0 !important;}
+    .day6 .day-inner {display: flex; flex-direction: column; align-items: center; margin: 0 auto; height: 1878px;}
     .day6 .day-inner .left .day {width: 400px; height: 604px; position:absolute; top: 6%; left: 6%;}
     .day6 .day-inner .left .textbox {position:absolute; top: 84%; left: 10%; text-align: center;}
     .day6 .day-inner .left h2.tit {font-size: 54px; line-height: 110%;} 
     .day6 .day-inner .left p.txt {font-size: 24px; margin-top: -5px;}
     .day6 .day-inner .left p.txt .hide1024 {display: none;}
-    .day6 .day-inner .right {width: 668px; height: 897px; margin-top: 80%; z-index: -1;}
-    .day6 .day-inner .right img {display: block; width: 85%; height: 100%; position: absolute; top: 0%; left: 8%; margin: auto;}
+    .day6 .day-inner .left p.txt b {display: inline;}
+    .day6 .day-inner .right {width: 668px; height: 897px; margin-top: 80%; z-index: 0; top: 9%; left: 6%}
+    .day6 .day-inner .right img {display: block; width: 85%; height: 100%; position: absolute; margin: auto;}
 
-    .ad .ad-inner video {width: 669px; height: 410px;}
+    .ad .ad-inner {background: #F0E5E0;}
+    .ad .ad-inner video {width: 669px; height: 410px; margin: 0 auto;}
 
-    footer .top h3 {padding-top: 150px;}
+    footer .top {background-color: #F0E5E0 !important; z-index: 1;}
+    footer .top::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #F0E5E0; /* 이 색상이 검은색 body를 가려줍니다 */
+        z-index: -1; /* 글자(h3)보다는 아래, body보다는 위 */
+    }
+    footer .top h3 {padding-top: 100px; background: transparent; background: #F0E5E0; color: #1a1a1e;}
     footer .bottom {padding: 355px 50px 100px 50px; position: relative;}
     footer .bottom .fo-ble {position: absolute; top: 20%; left: 30%; width: 303px; height: 170px;}
     footer .bottom ul.left {width: 100%;}
@@ -251,12 +262,29 @@ button:focus {outline: none;}
     footer .bottom ul.right .contact .cus {font-size: 18px;}
     footer .bottom ul.right .contact .none {display: none;}
     footer .bottom ul.right .time {font-size: 16px;}
+
+    .tit.motion b, .txt.motion b, .tit.motion b:nth-child(2), .txt.motion b:nth-child(2), .txt.motion b:nth-child(3) {animation: none; opacity: 1 ; transform: none ;}
+    .tit, .txt {overflow: visible;}
 }
 
 @media screen and (max-width: 390px){
     .tit {font-size: 34px; line-height: 100%; letter-spacing: -3%;}
     .txt {font-size: 16px;}
-    .inner-header .mobile-menu-toggle {top: 0%; left: 0%;}
+    .inner-header .mobile-menu-toggle {top: 0%; left: 0%;} 
+
+    .menuOpen {display: block;}
+    .menuOpen .menuWrap {width: auto; height: 100vh; background: rgba(26, 26, 30, 0.8); z-index: 100; top: 0; right: 0; position: fixed;}
+    .menuOpen .menuWrap .close {display: block; width: 25px; height: 25px; position: absolute; right: 7%; top: 5%;}
+    .menuOpen .menuWrap .close img {width: 100%;}
+    .menuOpen .menuWrap .menu-tit {font-family: 'El Messiri', sans-serif; font-size: 28px; position: absolute; top: 30%; left: 50%; transform: translateX(-50%); text-align: center; font-weight: 200;}
+    .menuOpen .menuWrap .menu-tit li {margin-bottom: 15px;}
+    .menuOpen .menuWrap .menu-tit li a {display: inline-block; position: relative; transition: all 0.3s; color: rgba(234,234,234,0.6);}
+    .menuOpen .menuWrap .menu-tit li a:hover {color: #eaeaea; opacity: 1; transform: scale(1.1);}
+    .menuOpen .menuWrap .menu-tit:hover li a:not(:hover) {opacity: 0.5;}
+    .menuOpen .menuWrap .menu-tit li.menu-margin {margin-bottom: 30px;}
+    .menuOpen .menuWrap {width: 0%; opacity: 0; left: -100%; transition: all 0.6s;}
+    .menuOpen .menuWrap.on {width: 100%; opacity: 1; left: 0; transition: all 0.9s;}
+
     .intro .intro-inner .txt .index768 {display: block; width: 100%;}
     .intro .intro-inner .txt .index390 {display: none;}
     .inner-header .mobile-menu-toggle a {display: block; width: 50px; height: 50px;}
@@ -281,9 +309,8 @@ button:focus {outline: none;}
     .scroll-item .right-content ul {padding: 160px 98px 150px;}
     .product-list li {margin-bottom: 70px;}
     .product-list li a {width: 193px; height: 193px;}
-    .product-title {top: 29%; right: 31%; font-size: 76px;}
-    .product-title.tea {right: 34%;}
-    .product-title.egg {right: 28%;}
+    .product-title {top: 54%; right: 1%; font-size: 76px;}
+
 
     .model .model-inner {margin: 100px auto 40px;}
     .model .model-inner .right-txt {top: 22%;}
@@ -301,7 +328,7 @@ button:focus {outline: none;}
 
     .moving-txt .marquee {font-size: 120px; margin-bottom: 10px; letter-spacing: 2%;}
 
-    .skin-concern {padding: 100px 0; height: 220vh;}
+    .skin-concern {padding: 100px 0; height: 250vh;}
     .skin-concern .concern-inner .text-box {margin: 0 auto 100px;}
     .skin-concern .skin .left {width: 50%;}
     .skin-concern span.label {font-size: 12px; margin-bottom: 10px;}
@@ -339,18 +366,18 @@ button:focus {outline: none;}
     .theraphy ul li a.width { width: 207px; height: 157px;}
     .theraphy ul li a.height {width: 155px; height: 208px;}
     
-    .day6 .day-inner {height: 972px; margin: 0 auto 100px; display: flex; flex-direction: column; align-items: center;}
+    .day6 .day-inner {height: 972px; margin: 0 auto 100px; display: flex; flex-direction: column; align-items: center; background: #F0E5E0;}
     .day6 .day-inner .left .day {width: 222px; height: 336px; position:absolute; top: 7%;}
     .day6 .day-inner .left .day img {width: 100%;}
     .day6 .day-inner .left .textbox {width: 100%; position:absolute; top: 85%; left: 0%; text-align: center;}
     .day6 .day-inner .left h2.tit {font-size: 32px;} 
     .day6 .day-inner .left p.txt {font-size: 16px;}
-    .day6 .day-inner .right {width: 330px; height: 443px; z-index: -1;  margin-top: 65%;}
-    .day6 .day-inner .right img {display: block; width: 90%; height: 100%; position: absolute; top: 0%; left: 5%; margin: auto;}
+    .day6 .day-inner .right {width: 330px; height: 443px; position: absolute; top: 15%; left: 6%;}
+    .day6 .day-inner .right img {display: block; width: 90%; height: 100%;; margin: auto;}
 
     .ad .ad-inner video {width: 330px; height: 202px;}
 
-    footer .top h3 {font-size: 92px;  padding-top: 150px;}
+    footer .top h3 {font-size: 92px;  padding-top: 130px; background: transparent; clip-path: inset(0 100% 0 0); -webkit-clip-path: inset(0 100% 0 0); transition: none;}
     footer .bottom {padding: 230px 20px 80px 20px; position: relative;}
     footer .bottom .fo-ble {position: absolute; top: 20%; left: 25%; width: 195px; height: 109px;}
     footer .bottom ul.left {width: 100%;}
@@ -362,4 +389,3 @@ button:focus {outline: none;}
     footer .bottom ul.right .contact .none {display: none;}
     footer .bottom ul.right .time {font-size: 10px;}
 }
-

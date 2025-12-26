@@ -14,13 +14,7 @@ a:focus {outline: none;}
 button:focus {outline: none;}
 
 /* 공통요소 */
-body {font-family: 'Pretendard', sans-serif; font-weight: 300; height: 100%; margin: auto; padding: 0; overflow-x: hidden; background: #1A1A1E; z-index: 0;}
-/* body.on {background: #F0E5E0; transition: all 0.4s;}
-/* body.on .model .model-inner .bottom .btn::before {background: #ddddeb; transition: all 0.4s;}
-.wrap {margin: 0 auto; overflow: hidden; position: relative;} */
-/* body.on .skin-concern .concern-inner .concern-list {background: #1A1A1E; transition: all 0.4s;}
-.wrap {margin: 0 auto; overflow: hidden; position: relative;}  */
-
+body {font-family: 'Pretendard', sans-serif; font-weight: 300; height: 100%; margin: auto; padding: 0; overflow-x: hidden; background: #F0E5E0; z-index: 0;}
 .tit {font-family: 'El Messiri', sans-serif; font-weight: normal; font-size: clamp(60px, 54px, 34px); letter-spacing: -3%;}
 .txt {font-size: clamp(20px, 24px, 16px); font-weight: 200;}
 span.dot {color: #FFA223;}
@@ -43,7 +37,7 @@ header.fixed-state {
     transition: transform 0.4s ease, height 065s ease, background 0.5s ease;
     z-index: 1000;
 }
-header.header-hidden {
+header.hide {
     transform: translateY(-100%);
 }
 header.fixed-state .inner-header nav {
@@ -52,7 +46,8 @@ header.fixed-state .inner-header nav {
 }
 header.fixed-state .inner-header .logo {opacity: 1;}
 
-.inner-header {width: 100%; margin: 0 auto; align-items: center;  font-family: 'El Messiri', sans-serif; color: rgba(234,234,234,0.7); font-size: 16px; letter-spacing: -2%; font-weight: normal;}
+.inner-header {width: 100%; margin: 0 auto; align-items: center;  font-family: 'El Messiri', sans-serif; color: rgba(234,234,234,0.4); font-size: 16px; letter-spacing: -2%; font-weight: normal;}
+.inner-header .gnb .have {color: rgba(234,234,234,0.8);}
 .inner-header .mobile-menu-toggle {display: none;}
 .inner-header nav {width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 39px 148px 70px;}
 .inner-header .gnb {width: 19%; display: flex; justify-content: space-between;}
@@ -93,13 +88,13 @@ header.scrolled .inner-header .logo {
 .visual .grad {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 10%;
     width: 100%;
-    height: 120vh;
+    height: 150vh;
     background: linear-gradient(to bottom, 
                 rgba(26,26,30,0) 0%, 
-                rgba(26,26,30,0) 30%,
-                rgba(26,26,30,1) 90%,  
+                rgba(26,26,30,0) 20%,
+                rgba(26,26,30,1) 75%,  
                 rgba(26,26,30,1) 100%);
     z-index: 3;
 }
@@ -111,7 +106,7 @@ header.scrolled .inner-header .logo {
 
 /* intro */
 .intro {background: #1A1A1E; width: 100%; height: 100vh; padding: 350px 0; align-items: center;}
-.intro .intro-inner {margin: 0 auto; width: 80%; height: 100px; text-align: center;}
+.intro .intro-inner {margin: 100px auto 0; width: 80%; height: 100px; text-align: center;}
 .intro .intro-inner .tit {color: #eaeaea; text-align: center; margin-bottom: 20px;}
 .intro .intro-inner .txt {color: #a9a9a9; line-height: 140%; letter-spacing: 0;}
 .intro .intro-inner .tit .index768::before {display: none;}
@@ -130,25 +125,23 @@ header.scrolled .inner-header .logo {
 .intro-inner .tit span:last-child {color: #FFA223 !important; opacity: 1;}
 
 /* product */
-.scroll-container {width: 100%; background-color: transparent; overflow: hidden;}
-.scroll-item {position: relative; width: 100%; min-height: 100vh; overflow: hidden;}
-.scroll-item__inner {display: flex; width: 100%; position: relative;}
+.scroll-container {width: 100%; position: relative; overflow: visible; background: transparent;}
+.scroll-item {position: relative; width: 100%; height: 100vh; overflow: hidden;}
+.scroll-item__inner {display: flex; width: 100%; height: 100%;}
 
 .left-sticky {width: 50%; height: 100vh; position: relative; overflow: hidden;}
-.left-sticky .img-wrap {width: 100%; height: 100%;}
-.left-sticky .img-wrap img {width: 100%;height: 100%; object-fit: cover;}
+.left-sticky .img-wrap {position: relative; width: 100%; height: 100%; z-index: 10;}
+.left-sticky .img-wrap img {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0;}
+.img-wrap img:first-child {opacity: 1;}
 
-.product-title {position: absolute; top: 19%; right: 18%; font-size: 150px; font-family: 'OT Neglige', sans-serif;font-weight: normal; color: #967A6B; z-index: 10; pointer-events: none;}
-.right-content {width: 50%; padding-top: 60vh; padding-bottom: 35vh; display: flex; justify-content: center; align-items: center;}
-.product-list {display: flex; flex-direction: column;}
-.product-title.tea {right: 19%;}
-.product-title.egg {right: 17%;}
-.product-list li {opacity: 1; margin-bottom: 350px;}
-.product-list li:last-child {margin-bottom: 0px;}
-.product-list li a {display: block; width: 380px; height: 380px; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);}
-.product-list li a:hover {transform: scale(1.05);}
-.product-list li img {width: 100%; height: 100%; object-fit: cover;}
+.product-title {position: fixed; top: 65%; right: -25%; font-size: 150px; font-family: 'OT Neglige', sans-serif; font-weight: normal; color: #967A6B; z-index: 9999; pointer-events: none; width: 100%; opacity: 0; margin: 0; text-align: center; white-space: nowrap;}
+/* .product-title.ble {opacity: 1;}
+.product-title:first-of-type { opacity: 1;} */
 
+.right-content {width: 50%; height: 100vh; display: flex; justify-content: center; align-items: center; perspective: 2000px;}
+.product-list {position: relative; width: 410px; height: 410px; transform-style: preserve-3d;}
+.product-list li {position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; list-style: none;}
+.product-list li img { width: 100%; height: 100%; object-fit: cover;}
 
 /* model */
 .model {width: 100%; background-color: transparent !important; position: relative; z-index: 4; min-height: 100vh; }
@@ -157,17 +150,18 @@ header.scrolled .inner-header .logo {
 .model .model-inner .right-txt .tit .index768::after {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
 .model .model-inner .right-txt .txt .index768::after {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
 .model .model-inner .right-txt .tit {line-height: 100%; color: #CCA693; margin-bottom: 10px; letter-spacing: -2%; font-weight: 300;}
+
 .model .model-inner .right-txt .tit span {color: #CCA693 !important; }
 .model .model-inner .right-txt .txt {line-height: 140%; letter-spacing: -2%; color: #414141;}
 .model .model-inner .right-txt .txt span {color: #414141 !important;}
 .model .model-inner .top {width: 40%; display: flex; justify-content: space-between;}
 .model .model-inner .top .woman {display: block; width: 54%;}
 .model .model-inner .top .woman img {width: 100%;} 
-.model .model-inner .top .wind {display: block; width: 43%; padding-top: 60%;}
+.model .model-inner .top .wind {display: block; width: 43%; padding-top: 56%;}
 .model .model-inner .top .wind img {width: 100%;}
 
 .model .model-inner .middle {width: 60%; display: flex;}
-.model .model-inner .middle .vertical {width: 13%; display: block; position: absolute; bottom: 54.5%; right: 52%; overflow: hidden; animation: verticalAni 4s ease-out infinite;}
+.model .model-inner .middle .vertical {width: 13%; display: block; position: absolute; bottom: 55.5%; right: 52%; overflow: hidden; animation: verticalAni 4s ease-out infinite;}
 .model .model-inner .middle .vertical img {width: 100%; display: block; position: absolute; bottom: 0; left: 0;}
 .model .imgAni {
     display: block;
@@ -191,11 +185,14 @@ header.scrolled .inner-header .logo {
 .model .model-inner .middle .her {width: 50%; position: absolute; top: 20%; right: 0;}
 .model .model-inner .middle .her img {width: 100%;}
 
-.model .model-inner .bottom {width: 50%; margin: 1400px auto 80px;}
+.model .model-inner .bottom {width: 50%; margin: 1300px auto 80px;}
 .model .model-inner .bottom .renewal {width: 60%; margin: auto;}
-.model .model-inner .bottom .renewal img {width: 100%; margin-bottom: -16px;}
+.model .model-inner .bottom .renewal img {width: 100%; margin-bottom: -36px;}
 .model .model-inner .bottom .txt {color: #414141; line-height: 150%; text-align: center; margin-bottom: 36px;}
+
 .model .model-inner .bottom .txt span {color: #414141 !important;}
+.model .model-inner .bottom .txt br {display: none;}
+.model .model-inner .bottom .txt b {display: block; line-height: 1.4; margin: 0; padding: 0;}
 .model .model-inner .bottom .txt .index390::after {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
 
 .model .model-inner .bottom .btn {
@@ -277,7 +274,7 @@ header.scrolled .inner-header .logo {
 .moving-txt .right-to-left span {width: max-content; display: flex; gap: 10px; animation: marqueeRTL 30s linear infinite;}
 
 /* skinconcern */
-.skin-concern {background-color: transparent; padding: 200px 0 310px; height: 380vh; cursor: none;}
+.skin-concern {background-color: transparent; padding: 200px 0 310px; height: 380vh; cursor: none; background: #1A1A1E;}
 .skin-concern .concern-inner {width: 100%; margin: 0 auto; max-width: 1600px;}
 .skin-concern .concern-inner .text-box {width: 100%; text-align: center; margin: 0 auto 200px;}
 .skin-concern .concern-inner .tit .index768::after {content: "\A"; white-space: pre; display: block; height: 0; margin: 0; line-height: 0;}
@@ -302,6 +299,10 @@ header.scrolled .inner-header .logo {
     /* transition: all 0.5s ease; */
     margin-right: 1px; /* 단어 사이 간격 */
 }
+
+.skin-concern .imgAni {position: relative; clip-path: inset(100% 0 0 0); -webkit-clip-path: inset(100% 0 0 0);
+overflow: hidden;}
+.skin-concern .imgAni img {width: 100%; height: 100%; object-fit: cover; display: block;}
 
 .skin-concern .concern-list .moisturizing {position: absolute; right: 16%; top: 0;}
 .skin-concern .concern-list .moisturizing .left {margin-right: auto; position: absolute; right: 165%; top: 38%}
@@ -329,23 +330,23 @@ header.scrolled .inner-header .logo {
 .skin-concern .concern-list .elasticity .img-box a img {width: 100%;}
 
 /* Theraghy */
-.theraphy {background: url(../img/new_bg.png) no-repeat center / cover; width: 100%; overflow: hidden;}
-.theraphy .theraphy-inner {padding-top: 205px;}
+.theraphy {background: url(../img/new_bg.png) no-repeat center / cover; width: 100%; overflow: hidden; z-index: 1;}
+.theraphy .theraphy-inner {padding-top: 205px; z-index: 5;}
 .theraphy .theraphy-inner .title {padding: 90px 0 250px; position: relative;}
 .theraphy .theraphy-inner .title p {font-size: 200px; font-family: 'OT Neglige', sans-serif; color:#EAEAEA; line-height: 100%; letter-spacing: 2%; font-weight: normal; margin-bottom: 69px; text-align: center;}
 .theraphy .theraphy-inner .title p.a {position:absolute; left: 25%; top: 20px;}
 .theraphy .theraphy-inner .title p.b {position:absolute; right: 25%; top: 20px;}
 .theraphy .theraphy-inner .title span {position:absolute; background: #eaeaea; width: 13%; height: 1px; left: 38%; top: 36%;}
 
-.theraphy .marquee-container {width: 100%; overflow-x: auto; cursor: grab; -ms-overflow-style: none; scrollbar-width: none;}
+.theraphy .marquee-container {width: 100%; overflow: hidden; cursor: default;}
 .theraphy .marquee-container::-webkit-scrollbar {display: none;}
-.theraphy .marquee-content {display: flex; width: max-content; flex-wrap: nowrap; padding: 0px; margin-right: 120px;}
+.theraphy .marquee-content {display: flex; width: max-content; flex-wrap: nowrap; padding: 0px; will-change: transform;}
 .theraphy ul {display: flex; justify-content: space-between; margin: 0 auto 150px; width: 100%;}
-.theraphy ul li {flex: 0 0 auto; width: auto; margin-right: 120px; display: flex; flex-direction: column;}
+.theraphy ul li {flex: 0 0 auto; width: auto; margin-right: 150px; display: flex; flex-direction: column; padding: 50px 0;}
 .theraphy ul li .txt-box {margin-top: 20px;}
 .theraphy ul li a.width {display: block; width: 319px; height: 242px; margin-bottom: 10px; overflow: hidden;}
 .theraphy ul li a.height {display: block; width: 239px; height: 320px; margin-top: 35px; overflow: hidden;}
-.theraphy ul li a img {width: 100%; filter: brightness(70%);} 
+.theraphy ul li a img {width: 100%; filter: brightness(60%);} 
 .theraphy ul li .txt-box h3 {font-family: 'OT Neglige', sans-serif; letter-spacing: 3%; font-size: 40px; color: #EAEAEA; font-weight: normal;}
 .theraphy ul li .txt-box p {color: #A9A9A9; font-size: 16px;}
 .theraphy ul li a.imgAni2 {
@@ -360,7 +361,7 @@ header.scrolled .inner-header .logo {
     object-fit: cover;
     position: static; /* 중요: 부모 안에서 자유롭게 움직이게 함 */
     transform: none;
-    filter: brightness(70%);
+    filter: brightness(80%);
 }
 
 /*  Day6 */
@@ -370,8 +371,10 @@ header.scrolled .inner-header .logo {
 .day6 .day-inner .left .day {width:438px; height: 663px;}
 .day6 .day-inner .left .day img {width: 100%;}
 .day6 .day-inner .left .textbox {margin-top: 30px;}
-.day6 .day-inner .left h2.tit {font-size: 38px; color:#1A1A1E; font-weight: 300;} 
+.day6 .day-inner .left h2.tit {font-size: 38px; color:#1A1A1E; font-weight: 300;}
 .day6 .day-inner .left p.txt {color:#747273; margin-top: 10px;}
+.day6 .day-inner .left p.txt br {display: none;}
+
 .day6 .day-inner .left p.txt span {color: #747273 !important;}
 .day6 .day-inner .right {width: 60%; margin-top: 100px;}
 .day6 .day-inner .right img {width: 100%; width: 755px; height: 1088px;}
@@ -396,6 +399,7 @@ header.scrolled .inner-header .logo {
 
 /* footer */
 footer {width: 100%; margin: 0 auto;}
+footer top {background: #F0E5E0;}
 footer .top h3 {font-size: 24vw; font-family:'OT Neglige', sans-serif; line-height: 140%; letter-spacing: 2%; color: #1A1A1E; font-weight: normal; text-align: center; padding-top: 190px; white-space: nowrap; overflow: hidden; clip-path: inset(0 100% 0 0); transition: clip-path 1.5s ease-in-out;}
 
 footer .top h3.active {clip-path: inset(0 0 0 0);}
@@ -409,53 +413,18 @@ footer .bottom ul.right .contact .none {display: inline-block;}
 footer .bottom ul.right .time {font-size: 16px; color: #DBDBDB;}
 
 
-/* 
-.woman.motion {position: relative; animation-name: imgAni; animation-duration: 1s;}
-.wind.motion {position: relative; animation-name: imgAni; animation-duration: 1s;}
-.vertical.motion {position: relative; animation-name: imgAni; animation-duration: 0.8s;}
-.her.motion {position: relative; animation-name: imgAni; animation-duration: 1s;}
-.img-box.motion {position: relative; animation-name: imgAni; animation-duration: 1s;}
-
-@keyframes imgAni {
-    0% {transform: translateY(150px);}
-}
-.woman.motion:after {content: ''; width: 100%; height: 0%; animation-name: mask; animation-duration: 1.2s;}
-.wind.motion:after {content: ''; width: 100%; height: 0%; animation-name: mask; animation-duration: 1.2s;}
-.vertical.motion:after {content: ''; width: 100%; height: 0%; animation-name: mask; animation-duration: 1.2s;}
-.her.motion:after {content: ''; width: 100%; height: 0%; animation-name: mask; animation-duration: 1.2s;}
-.img-box.motion:after {content: ''; width: 100%; height: 0%; animation-name: mask; animation-duration: 1.2s;} */
-
-/* animation */
-/* @keyframes zero {
-  0% {opacity: 0;}
-  90% {opacity: 0;}
-}
-
-.intro .intro-inner
-.intro .intro-inner.motion */
 
 @keyframes textAni {
-  0% {opacity: 0;}
-  30% {opacity: 0; transform: translate3d(0, 40px, 0) skewY(8deg); transform-origin: top left;}
+    0% {opacity: 0;}
+    30% {opacity: 0; transform: translate3d(0,40px,0) skewY(8deg); transform-origin: top left;}
 }
-.model .model-inner .right-txt.motion h2, .model .model-inner .right-txt.motion p {transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
-.model .model-inner .right-txt.motion h2 b, .model .model-inner .right-txt.motion p b {display: block; animation: textAni 1.2s;}
 
-.day6 .day-inner .left .textbox.motion h2.tit, .day6 .day-inner .left .textbox.motion p.txt  {transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
-.day6 .day-inner .left .textbox.motion h2.tit b, .day6 .day-inner .left .textbox.motion p.txt b {display: block; animation: textAni 1.2s;}
+.tit, .txt {overflow: hidden;}
+.tit.motion, .txt.motion {transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
 
-.skin-concern .concern-inner .text-box.motion .tit, .skin-concern .concern-inner .text-box.motion .txt {transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
-.skin-concern .concern-inner .text-box.motion .tit b, .skin-concern .concern-inner .text-box.motion .txt b {display: block; animation: textAni 1.2s;}
+.tit.motion b, .txt.motion b {display: block; animation: textAni 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;}
 
-.model .model-inner .bottom .txt.motion {transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
-.model .model-inner .bottom .txt.motion b {display: block; animation: textAni 1.2s;}
-
-
-@keyframes mask {
-  0% {height: 95%;}
-  100% {height: 0%;}
-}
-.imgAni {position: relative; overflow: hidden; background-color: #1A1A1E;}
-.imgAni img {vertical-align: middle; transform: scale(1.02)}
-.imgAni.motion:after {content:''; width: 100%; height: 0%; background: #1A1A1E; position: absolute; top: 0; left: 0; animation: mask 1s cubic-bezier(0.7, 0, 0.3, 1);}
+.tit.motion b:nth-child(2) { animation-delay: 0.15s; }
+.txt.motion b:nth-child(2) { animation-delay: 0.2s; }
+.txt.motion b:nth-child(3) { animation-delay: 0.25s; }
 

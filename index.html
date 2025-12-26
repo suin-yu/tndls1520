@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papa Recipe</title>
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -16,6 +16,9 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <script src="https://unpkg.com/split-type"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -32,7 +35,7 @@
                     <div class="menuWrap">
                         <a href="#" class="close"><img src="img/close.png" alt=""></a>
                         <ul class="menu-tit">
-                            <li><a href="brand/brand.html"><span><b>Brand수정수정</b></span></a></li>
+                            <li><a href="brand/brand.html"><span><b>Brand</b></span></a></li>
                             <li><a href="product/productMain.html"><span><b>Product</b></span></a></li>
                             <li><a href="#"><span><b>Evnet</b></span></a></li>
                             <li class="menu-margin"><a href="#"><span><b>Contact</b></span></a></li>
@@ -43,8 +46,8 @@
                 </div>
                 <nav>
                     <ul class="gnb">
-                        <li><a href="brand/brand.html">Brand</a></li>
-                        <li><a href="product/productMain.html">Product</a></li>
+                        <li class="have"><a href="brand/brand.html">Brand</a></li>
+                        <li class="have"><a href="product/productMain.html">Product</a></li>
                         <li><a href="#">Event</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -74,6 +77,7 @@
                 <p class="txt">땅에서 얻은 순수한 원료와 레시피로 <span class="index768"> 피부 본연의 건강과 생기를 되살리며, </span><br><span class="index390">자연주의 철학으로</span> 매일의 라이프스타일까지 지켜드립니다.</p>
             </div>
         </section>
+        
         <!-- product -->
         <div class="scroll-container">
             <section class="scroll-item sec-blemish">
@@ -81,48 +85,36 @@
                     <div class="left-sticky">
                         <div class="img-wrap">
                             <img src="img/product_1.png" alt="Blemish Main">
+                            <img src="img/product_1-2.png" alt="Blemish Main2">
+                            <img src="img/product_2.png" alt="Teatree Main">
+                            <img src="img/product_2-2.png" alt="Teatree Main2">
+                            <img src="img/product_3.png" alt="Eggplant Main">
+                            <img src="img/product_3-2.png" alt="Eggplant Main2">
                         </div>
                     </div>
                     <h2 class="product-title ble">Blemish</h2>
+                    <h2 class="product-title tea">Teatree</h2>
+                    <h2 class="product-title egg">Eggplant</h2>
                     <div class="right-content">
                         <ul class="product-list">
                             <li><a href="#"><img src="img/blemish_1.png" alt=""></a></li>
                             <li><a href="#"><img src="img/blemish_2.png" alt=""></a></li>
                             <li><a href="#"><img src="img/blemish_3.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section class="scroll-item sec-teatree">
-                <div class="scroll-item__inner">
-                    <div class="left-sticky">
-                        <div class="img-wrap">
-                            <img src="img/product_2.png" alt="Teatree Main">
-                        </div>
-                    </div>
-                    <h2 class="product-title tea">Teatree</h2>
-                    <div class="right-content">
-                        <ul class="product-list">
+                            <li><a href="#"><img src="img/blemish_4.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/blemish_5.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/blemish_6.png" alt=""></a></li>
                             <li><a href="#"><img src="img/teatree_1.png" alt=""></a></li>
                             <li><a href="#"><img src="img/teatree_2.png" alt=""></a></li>
                             <li><a href="#"><img src="img/teatree_3.png" alt=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section class="scroll-item sec-eggplant">
-                <div class="scroll-item__inner">
-                    <div class="left-sticky">
-                        <div class="img-wrap">
-                            <img src="img/product_3.png" alt="Eggplant Main">
-                        </div>
-                     </div>
-                     <h2 class="product-title egg">Eggplant</h2>
-                    <div class="right-content">
-                        <ul class="product-list">
+                            <li><a href="#"><img src="img/teatree_4.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/teatree_5.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/teatree_6.png" alt=""></a></li>
                             <li><a href="#"><img src="img/eggplant_1.png" alt=""></a></li>
                             <li><a href="#"><img src="img/eggplant_2.png" alt=""></a></li>
                             <li><a href="#"><img src="img/eggplant_3.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/eggplant_4.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/eggplant_5.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/eggplant_6.png" alt=""></a></li>
                         </ul>
                     </div>
                 </div>
@@ -135,9 +127,9 @@
                     <div class="woman imgAni"><img src="img/model_1.png" alt=""></div>
                     <div class="wind imgAni"><img src="img/model_2.png" alt=""></div>
                 </div>
-                <div class="right-txt animate"  data-animate="motion">
-                    <h2 class="tit"><b>Nature that comforts <span class="index768">your daily skin —</span> it all begins <span class="index768">with Papa Recipe.</span></b></h2>
-                    <p class="txt"><b>자연이 매일의 피부를 위로하는 순간, <span class="index768">그 시작에는 언제나 파파레서피가 있습니다.</span> 자연주의 원료의 깊은 케어로 <span class="index768">피부에 오래 머무는 가치를 완성합니다.</b></span></p>
+                <div class="right-txt">
+                    <h2 class="tit animate"  data-animate="motion"><b>Nature that comforts <span class="index768">your daily skin —</span></b><b>it all begins <span class="index768">with Papa Recipe.</span></b></h2>
+                    <p class="txt animate"  data-animate="motion"><b>자연이 매일의 피부를 위로하는 순간, <span class="index768">그 시작에는 언제나 파파레서피가 있습니다.</b></span><b>자연주의 원료의 깊은 케어로 <span class="index768">피부에 오래 머무는 가치를 완성합니다.</b></span></p>
                 </div>
                 <div class="middle">
                     <div class="vertical"><img src="img/logo.png" alt=""></div>
@@ -145,8 +137,8 @@
                 </div>
                 <div class="bottom">
                     <div class="renewal imgAni"><img src="img/model_4.png" alt="" ></div>
-                    <p class="txt textAni animate"  data-animate="motion">
-                        <b>불필요한 자극을 잠재우고, <span class="index768 none">숨듯 감춰져 있던 </span> <span class="index390">피부의 결을 조용히 다시 일으키는 한 방울.</span> 상처난 피부 위로 천천히 스며들어 진정을 드리우고, <br> 하루의 끝에서 비로소 내려놓을 수 있는 <span class="index768">깊고 고요한 안식을 마주해보세요.</span></b>
+                    <p class="txt animate"  data-animate="motion">
+                        <b>불필요한 자극을 잠재우고, <span class="index768 none">숨듯 감춰져 있던 </span> <span class="index390">피부의 결을 조용히 다시 일으키는 한 방울.</span></b><b>상처난 피부 위로 천천히 스며들어 진정을 드리우고,</b><b>하루의 끝에서 비로소 내려놓을 수 있는 <span class="index768">깊고 고요한 안식을 마주해보세요.</span></b>
                     </p>
                     <a href="#" class="btn">See Renewal<span class="lnr lnr-chevron-right"></span></a>
                 </div>
@@ -170,10 +162,10 @@
 <!-- skinconcern -->
         <section class="skin-concern">
             <div class="concern-inner">
-                <div class="text-box animate"  data-animate="motion">
-                    <h2 class="tit"><b>When your skin <span class="index768">feels unbalanced,</span> discover the care and <span class="index1024 none">moisture <span class="index768 none">routine it <span class="index390">truly needs<span class="dot">.</span></span></span></span></b></h2>
-                    <p class="txt"><b>피부 장벽이 무너졌을 때 필요한 케어를 모았어요. <span class="index1024">지금 당신의 피부에게 맞는 보습 루틴을 확인해보세요.</span></b>
-                    </p> 
+                <div class="text-box">
+                    <h2 class="tit animate"  data-animate="motion"><b>When your skin <span class="index768">feels unbalanced,</span></b> <b>discover the care and <span class="index1024 none">moisture <span class="index768 none">routine it <span class="index390">truly needs<span class="dot">.</span></span></span></span></b></h2>
+                    <p class="txt animate"  data-animate="motion"><b>피부 장벽이 무너졌을 때 필요한 케어를 모았어요. <span class="index1024">지금 당신의 피부에게 맞는 보습 루틴을 확인해보세요.</span></b>
+                    </p>  
                 </div>
                 <div class="concern-list">
                     <div class="cursor-texture"><img src="img/skin_texture.png" alt=""></div>
@@ -269,9 +261,9 @@
             <div class="day-inner">
                 <div class="left">
                     <div class="day imgAni"><img src="img/day6_1.png" alt=""></div>
-                    <div class="textbox textAni animate"  data-animate="motion">
-                        <h2 class="tit"><b>Paparecipe with DAY6.</b></h2>
-                        <p class="txt"><b>자연이 쌓아온 시간의 깊이와 <span class="index1024">파파레서피가 지켜온 <br class="hide1024">진정한 가치를</span> <span class="index1024">DAY6가 함께합니다.</b></span></p>
+                    <div class="textbox">
+                        <h2 class="tit animate"  data-animate="motion"><b>Paparecipe with DAY6.</b></h2>
+                        <p class="txt animate"  data-animate="motion"><b>자연이 쌓아온 시간의 깊이와 <span class="index1024">파파레서피가 지켜온</b><b> <br class="hide1024">진정한 가치를</span> <span class="index1024">DAY6가 함께합니다.</span></b></p>
                     </div>
                 </div>
                 <div class="right imgAni"><img src="img/day6_2.png" alt=""></div>
@@ -306,5 +298,25 @@
             </div>
         </footer>
     </div>
+
+    <script>
+    const lenis = new Lenis({
+        duration: 1.2, // 스크롤 지속 시간 (높을수록 부드러움)
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // 부드러운 감속 함수
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    
+    // GSAP와 Lenis 연동
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time)=>{
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+</script>
 </body>
 </html>
