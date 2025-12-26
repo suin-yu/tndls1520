@@ -1,0 +1,617 @@
+/* 1024 */
+@media screen and (max-width:1024px) {
+
+     /* 이 구간까지는 여전히 모바일 메뉴 X */
+    .menuOpen {display: none;}
+
+    /* 헤더(nav) 패딩/정렬 */
+    .inner-header nav {padding: 39px 65px 70px;}
+    header.fixed-state .inner-header nav {padding: 39px 65px 70px;}
+
+    .inner-header .gnb {width:30%;}
+    .inner-header .tnb {width: 15%;}
+
+
+
+    .visual {padding: 0 0 200px;}
+    .visual .visual-inner .left, .visual .visual-inner .right  {column-gap: 30%;}
+    .introduce {padding: 100px 0 295px;}
+    .introduce.close {margin-top: 576px;}
+    .introduce .introduce-inner {width: 80%; margin:0 auto; text-align: center;}
+
+    /* bombee */
+    .bombee {aspect-ratio: 1024 /768; background: #CEB3A4;}
+    .bombee .bombee-inner {width: 80%; height: 100%; padding:400px 0}
+    .bombee .bombee-inner .title h2 {font-size: 200px; color: #FFFFFF; }
+    .bombee .bombee-inner .title h2.right {margin-right: 3%;}
+    .bombee .bombee-inner p.txt{font-size: 16px; color: #B49F93; font-weight: 300;}
+    .bombee .bombee-inner .imgBox {width: 34%; height: 57.5%; left: 36%; background: #F0E5E0;}
+    .bombee .bombee-inner .img {width: 45%; }
+    
+    /* story */
+    .story {padding: 0px 60px; aspect-ratio: 1024 / 2144;}
+
+    .story .story-inner .imgBox .img.story_1 {width:20vw; left: 4%;}
+    .story .story-inner .imgBox .img.story_2 {width:42vw;top: 11.5%; right: 4%;}
+    .story .story-inner .imgBox .img.story_3 {width:30vw;bottom: 53.5%; left: 0;}
+    .story .story-inner .imgBox .img.story_4 {width:38.8vw;bottom: 18%; right: 0;}
+
+    .story .story-inner .story-tit {font-size: 250px;}
+    .story .story-inner .title .story-tit.love {top: 11%; left: 17.5%;}
+    .story .story-inner .title .story-tit.infused {top: 21%; right: 15%;}
+    .story .story-inner .title .story-tit.skins {bottom: 47.8%; left: 14%;}
+    .story .story-inner .title .story-tit.prestige {bottom: 39%; right:9.5%;}
+    .story .story-inner .text {font-size: 20px;}
+    .story .story-inner .text .txt:nth-child(1) {top: 6%; left: 34%;}
+    .story .story-inner .text .txt:nth-child(2) {top: 33.5%; left: 39.5%;}
+    .story .story-inner .text .txt:nth-child(3) {bottom: 27%; left: 11%;}
+    
+
+    /* ingredient */
+    .ingredient-inner {width: 95%;}
+    .ingredient-inner a .box {padding: 40px 0;}
+    .ingredient-inner .box .left h2 {font-size: 80px;}
+    .ingredient-inner .box .right {font-size: 16px; width: 10%;}
+    .ingredient-inner .box .right {font-size: 16px; width: 36%;}
+    .ingredient-inner .box .img {width: 130px; height: 228px; top: 60%;}
+    .history-inner h1 {font-size: 250px;}
+    .history-inner ul li.y2025 span.line {left:28%}
+    .history-inner ul li .left .txt-box {margin-top: 51px;}
+    .ingredient-inner .box .right h2 .teatree1920 {display: none;}
+    .ingredient-inner a:hover .box .left span, .ingredient-inner a:focus .box .left span{width: 10px;height: 10px;}
+
+
+    /* history */
+    .history-inner ul li:not(.y2025) .left .txt-box {padding-bottom: 342px;}
+    .history-inner ul li.y2025 .txt-box {padding: 25.5% 1.04% 1% 4.89%;}
+    .history-inner ul li.y2025 .txt-box {margin-top: -26px;}
+
+
+    /* ourstory */
+.our {background: #F0E5E0; aspect-ratio: 1024 / 2078; padding: 200px 0;}
+.our-inner .tit {font-size: 60px;}
+.our-inner {width: 90%;}
+.our-inner .txt-box p.txt {margin-top: 50px;}
+.our-inner .txt-box .bottom {text-align: end; bottom: 31%; left: 0;}
+.our-inner .txt-box .bottom p.txt {margin-top: 50px;}
+
+.our-inner .img-box>div {width: 76%;}
+.our-inner .img-box .top {top: 12.5%; right: 0;}
+.our-inner .img-box .bottom {bottom: 0%; left: 0;}
+
+
+
+    /* footer */
+    footer .top h3 {font-size: 185px;  padding-top: 100px;}
+    footer .bottom {padding: 70px 40px 77px 40px;}
+    footer .bottom .fo-ble {width: 235px; height: 132px; margin-right: 40px;}
+    footer .bottom ul.left {width: 40%;}
+    footer .bottom ul li {font-size: 16px;}
+    footer .bottom ul.right {width: 222px; margin-left: 20px;} 
+    footer .bottom ul.right .contact {font-size: 34px; margin-bottom: 15px; line-height: 100%;}
+    footer .bottom ul.right .contact .cus {font-size: 24px;}
+    footer .bottom ul.right .contact .none {display: none;}
+    footer .bottom ul.right .time {font-size: 16px;}
+}
+
+
+
+/* 768 ----------------------------------------------------------------*/
+
+
+    @media screen and (max-width: 768px) {
+       /* 기본 gnb/tnb는 숨기고 */
+    header .inner-header nav ul.gnb,
+    header .inner-header nav ul.tnb {
+        display: none;
+    }
+
+    .inner-header {position: relative;}
+
+    /* 햄버거 버튼 */
+    .inner-header .mobile-menu-toggle {
+        background: transparent;
+        border: none;
+        display: block;
+        position: absolute;
+        top: 20%;
+        left: 2%;
+    }
+    .inner-header .mobile-menu-toggle a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: relative;
+    }
+    .inner-header .mobile-menu-toggle a span {
+        position: absolute;
+        left: 50px;
+        background: #EAEAEA;
+        height: 2px;
+    }
+    .inner-header .mobile-menu-toggle a span:nth-child(1) {
+        width: 34px;
+        top: 28px;
+    }
+    .inner-header .mobile-menu-toggle a span:nth-child(2) {
+        width: 34px;
+        top: 39px;
+    }
+    .inner-header .mobile-menu-toggle a span:nth-child(3) {
+        width: 34px;
+        top: 50px;
+    }
+
+    /* 모바일에서 헤더 로고 위치 */
+    .inner-header .logo {
+        position: absolute; 
+        left: 50%; 
+        top: 38%;
+        transform: translateX(-50%); 
+        margin:0; 
+        z-index: 10;
+        opacity: 0; 
+        transition: opacity 0.4s ease;
+    }
+
+    /* 메뉴 오픈 전체 래퍼 */
+    .menuOpen {
+        display: block;
+    }
+    .menuOpen .menuWrap {
+        width: 0%;
+        height: 100vh;
+        background: rgba(26, 26, 30, 0.8);
+        z-index: 100;
+        top: 0;
+        right: 0;
+        position: fixed;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.6s;
+    }
+    .menuOpen .menuWrap.on {
+        width: 100%;
+        opacity: 1;
+        left: 0;
+        transition: all 0.9s;
+    }
+
+    .menuOpen .menuWrap .close {
+        display: block;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 7%;
+        top: 5%;
+    }
+    .menuOpen .menuWrap .close img {
+        width: 100%;
+    }
+
+    .menuOpen .menuWrap .menu-tit {
+        font-family: 'El Messiri', sans-serif;
+        font-size: 28px;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-weight: 200;
+    }
+    .menuOpen .menuWrap .menu-tit li {
+        margin-bottom: 15px;
+    }
+    .menuOpen .menuWrap .menu-tit li.menu-margin {
+        margin-bottom: 30px;
+    }
+    .menuOpen .menuWrap .menu-tit li a {
+        display: inline-block;
+        position: relative;
+        transition: all 0.3s;
+        color: rgba(234,234,234,0.6);
+    }
+    .menuOpen .menuWrap .menu-tit li a:hover {
+        color: #eaeaea;
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    .menuOpen .menuWrap .menu-tit:hover li a:not(:hover) {
+        opacity: 0.2;
+    }
+
+
+    .visual {padding:0; width: 100%;}
+    .visual .visual-inner {column-gap: 1%;}
+    .visual .visual-inner .middle {transform: scale(1.63) translateX(3%);}
+    .visual .visual-inner .middle_re {top: 51%;}
+    .visual .visual-inner .left, .visual .visual-inner .right  {column-gap: 30%;}
+    .introduce {padding: 100px 0 208px;}
+    .introduce.close {margin-top: 432px;}
+    .introduce .introduce-inner {width: 90%;}
+    .introduce .introduce-inner h2 {font-size: 54px;}
+    .introduce .introduce-inner p {font-size: 18px;}
+    .introduce .introduce-inner p.txt span.fff {font-size: 20px;}
+
+    /* bombee */
+    .bombee {aspect-ratio: 768 /576; }
+    .bombee .bombee-inner {width: 90%; height: 100%; padding:108px 0}
+    .bombee .bombee-inner .title {width: 93%; margin: 0 auto;}
+    .bombee .bombee-inner .title h2 {font-size: 155px;}
+    .bombee .bombee-inner .title h2.right {margin-right: 5%;}
+    .bombee .bombee-inner .imgBox {width: 31%; height: 62.5%; left: 36%; background: #F0E5E0;}
+    .bombee .bombee-inner .img {width: 45%; margin: 0 auto 7%;}
+
+    /* story */
+    .story {padding: 0px 50px; aspect-ratio: 768 / 2155;}
+
+
+    .story .story-inner .imgBox .img.story_1 {width:26vw; left: 1%;}
+    .story .story-inner .imgBox .img.story_2 {width:59vw; top: 13.5%; right: -15%;}
+    .story .story-inner .imgBox .img.story_3 {width:34vw; bottom: 47.5%; left: 0;}
+    .story .story-inner .imgBox .img.story_4 {width:39vw;bottom: 15%; right: 0;}
+
+    .story .story-inner .story-tit {font-size: 250px;}
+    .story .story-inner .title .story-tit.love {top: 10.5%; left: 1%;}
+    .story .story-inner .title .story-tit.infused {top: 22.5%; right: 13.5%;}
+    .story .story-inner .title .story-tit.skins {bottom: 41.8%; left: 11.5%;}
+    .story .story-inner .title .story-tit.prestige {bottom: 30%; right:5.5%;}
+    .story .story-inner .text {font-size: 18px; line-height: 150%; letter-spacing: -0.04em; font-weight: 400;}
+    .story .story-inner .text .txt:nth-child(1) {top: 6%; left: 38%;}
+    .story .story-inner .text .txt:nth-child(2) {top: 41%; left: 44%;}
+    .story .story-inner .text .txt:nth-child(3) {bottom: 22%; left: -3%;}
+
+
+
+    
+/* ingredient */
+    .ingredient-inner .box .lesft h2 {font-size: 80px; width: fit-content}
+    .ingredient-inner .box .text {flex-direction: column; margin: 0 auto; width: 90%;}
+    .ingredient-inner .box .left {display: flex; justify-content: center;}
+    .ingredient-inner .box .left h2.name {display: inline-block; margin:0; line-height: 1;}
+    .ingredient-inner .box .right {width: 95%; display: block; justify-content: center; align-items: center; text-align: center;}
+    .ingredient-inner a:hover .box {padding-top: 300px; transition: all 0.3s; }
+    .ingredient-inner a:hover .box .img, .ingredient-inner a:focus .box .img {opacity: 1; transition: all 0.3s; transform: translate(-50%, -50%) scale(1); width: 200px;}
+    .ingredient-inner a:hover .box .text {margin-top: 68px;}
+    .ingredient-inner a:hover .box .text h2 {margin-bottom: 20px;}
+    .ingredient-inner a:hover .img {top:26%}
+    .ingredient-inner .box .left span {margin-right: 1%;}
+    /* .ingredient-inner .box.rice .left span {top:74%; left:33%}
+    .ingredient-inner .box.eggplant .left span {top:70%; left:21%;}
+    .ingredient-inner .box.teatree .left span {top:71%; left:24%}
+    .ingredient-inner .box.Honey .left span {top:71%; left:27%}
+    .ingredient-inner .box.hyaluronic .left span {top:71%; left:15%} */
+
+    /* ourstory */
+.our {background: #F0E5E0; aspect-ratio: 768 / 2388; padding: 150px 50px;}
+.our-inner {width: 100%;}
+.our-inner .tit {font-size: 54px; display: inline;}
+.our-inner .txt-box .top h2:nth-of-type(2) span:first-child {margin-left: 8px;}
+.our-inner .txt-box {width: 100%;}
+.our-inner .img-box {width: 100%;}
+.our-inner .txt-box p.txt {margin-top: 36px; font-size: 24px;}
+.our-inner .txt-box .bottom {width: 100%; text-align: end; bottom: 30%; left: 0;}
+.our-inner .txt-box .bottom p.txt {margin-top: 36px;}
+
+.our-inner .img-box>div {width: 100%;}
+.our-inner .img-box .top {top: 24%; right: 0;}
+.our-inner .img-box .bottom {bottom: 0%; left: 0;}
+
+
+/* history */
+    .history, .history-inner ul {
+        overflow-x: visible !important; /* 가로 스크롤 제거 */
+        overflow-y: visible !important;
+        width: 100% !important;
+        height: auto !important; /* 높이 고정 해제 */
+        display: block !important; /* flex 해제 */
+        position: relative !important; /* sticky 해제 */
+    }
+
+    .history-inner ul li {
+        flex: none !important; /* li 폭 고정 해제 */
+        width: 100% !important;
+        margin-left: 0 !important; /* 좌측 여백 제거 */
+        padding-right: 0 !important; /* 우측 여백 제거 */
+        overflow: visible !important;
+    }
+
+    /* 선과 텍스트/이미지 위치 초기화 */
+    .history-inner ul li span.line {
+        width: 100% !important;
+        left: 0 !important;
+        top: auto !important;
+    }
+
+    .history-inner ul li .left,
+    .history-inner ul li .img {
+        margin-left: 0 !important;
+        margin-top: 20px !important; /* 모바일에서 세로 배치 */
+    }
+
+    .history-inner ul li .txt-box {
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 가로 이동 transform 초기화 */
+    .history-inner ul {
+        transform: none !important;
+
+    }
+    /* --- 공통 레이아웃 및 기본 설정 --- */
+.history-inner {width: 90%; margin-left: 100px; aspect-ratio: 1024 /8000; padding: 216px auto}
+.history-inner ul li {display: flex; flex-wrap: wrap; position:relative}
+.history-inner ul li, .history-inner ul li.y2016, .history-inner ul li.y2013 {margin-top: 9.1vw;}
+.history-inner ul li h2 {font-size: 26.0vw; width: 100%; height: auto; margin:0 0 9.4vw 0}
+.history-inner ul li h2 {margin-left: 9.4vw;}
+.history-inner ul li h2 span {font-size: 15.6vw;} 
+.history-inner ul li div.left, .history-inner ul li .img {margin-bottom: 0;}
+.history-inner ul li .left {margin-bottom: 0;}
+.history-inner ul li .img {display:flex; justify-content: space-between; margin-top: 0; margin-left: 12% !important;}
+.history-inner ul li .img .right {display: flex; flex-direction: row; justify-content: space-between;}
+.history-inner ul li .txt-box h3 {margin-top: -13.0vw;}
+.history-inner ul li .txt-box h3, .history-inner ul li .txt-box p {margin-left: 10.4vw;}
+.history-inner ul li .txt-box p {width: 61.1vw;}
+.history-inner ul li .txt-box p:last-child {margin-bottom: 0;}
+.history-inner ul li .txt-box a {margin:7.6vw 2.6vw 3.9vw;}
+.history-inner ul li:not(.y2025) .left .txt-box {margin-top: -7.8vw;}
+
+
+/* --- 2025 --- */
+.history-inner ul li.y2025 .year h2 {margin-top: 0;}
+.history-inner ul li.y2025 .img a.left {height: 0.0vw;}
+.history-inner ul li.y2025 .img a.left {width: 38.0vw; height: 0x;}
+.history-inner ul li.y2025 .img a.left img {width: 100%;}
+.history-inner ul li.y2025 .img a.right {width: 26.3vw; height: auto;}
+
+/* --- 2022 --- */
+.history-inner ul li.y2022 {padding-top: 11.7vw;}
+.history-inner ul li.y2022 .img a.left {width: 27.1vw; height: auto;}
+.history-inner ul li.y2022 .img a.right {width: 36.7vw; height: 39.1vw;}
+
+/* --- 2016 --- */
+.history-inner ul li.y2016 span.line {top: 5%; height: 100%}
+.history-inner ul li.y2016 .img {flex-direction: column;}
+.history-inner ul li.y2016 .img .right {margin-top: 13.7vw;}
+.history-inner ul li.y2016 .img a.left {width: 69.0vw;}
+.history-inner ul li.y2016 .img a.left {width: 69.0vw;}
+.history-inner ul li.y2016 .img a.top {width: 32.3vw;}
+.history-inner ul li.y2016 .img a.top {margin:0;}
+.history-inner ul li.y2016 .img a.bottom {width: 32.3vw;}
+
+
+/* --- 2013 --- */
+.history-inner ul li.y2013 .img a.left {width: 32.3vw;}
+.history-inner ul li.y2013 .img a.left {height: auto;}
+.history-inner ul li.y2013 .img a.right {width: 32.3vw; margin: 0% 0 0 5%;}
+
+
+/* --- 2012 --- */
+.history-inner ul li.y2012 .img a.left {width: 32.3vw;}
+.history-inner ul li.y2012 .img a.right {width: 32.3vw; height: 38.2vw;}
+    .history-inner ul li span.line {position: absolute; 
+    top: 51% !important;
+    left: 5.2% !important;
+    height: 240%; 
+    background: #434346; 
+    z-index: 0; 
+    transform: scaleX(0.003); 
+    transform-origin: left
+}
+
+/* 요소들이 선 위에 올 수 있도록 li 설정 확인 */
+.history-inner ul li {
+    position: relative;
+    overflow: visible !important; /* 선이 밖으로 나가도 보이게 설정 */
+}
+
+
+
+    /* footer */
+    footer .top h3 {font-size: 186px;  padding-top: 150px;}
+    footer .bottom {padding: 355px 50px 100px 50px; position: relative;}
+    footer .bottom .fo-ble {position: absolute; top: 20%; left: 30%; width: 303px; height: 170px;}
+    footer .bottom ul.left {width: 100%;}
+    footer .bottom ul li {font-size: 16px;}
+    footer .bottom ul.right {width: 50%; margin-left: 66px;} 
+    footer .bottom ul.right .contact {font-size: 25px; margin-bottom: 5px;}
+    .cus::after {content: "\A"; white-space: pre;}
+    footer .bottom ul.right .contact .cus {font-size: 18px;}
+    footer .bottom ul.right .contact .none {display: none;}
+    footer .bottom ul.right .time {font-size: 16px;}
+}
+
+
+/* 390 ----------------------------------------------------------------*/
+
+@media screen and (max-width: 390px) {
+
+     /* 햄버거 버튼 위치/크기 조정 */
+    .inner-header .mobile-menu-toggle {
+        top: 0%;
+        left: 0%;
+    }
+    .inner-header .mobile-menu-toggle a {
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+    .inner-header .mobile-menu-toggle a span:nth-child(1) {
+        width: 30px;
+        height: 1.5px;
+        top: 35px;
+        left: 31px;
+    }
+    .inner-header .mobile-menu-toggle a span:nth-child(2) {
+        width: 30px;
+        height: 1.5px;
+        top: 45px;
+        left: 31px;
+    }
+    .inner-header .mobile-menu-toggle a span:nth-child(3) {
+        width: 30px;
+        height: 1.5px;
+        top: 55px;
+        left: 31px;
+    }
+
+    /* 로고 조금 더 작게 */
+    .inner-header .logo {
+        top: 30%;
+    }
+    .inner-header .logo a {
+        width: 130px;
+        height: 22px;
+    }
+
+
+
+    .inner-header .mobile-menu-toggle a {display: block; width: 50px; height: 50px;}
+    .inner-header .mobile-menu-toggle a span:nth-child(1) {width: 30px; top: 35px; left: 31px;}
+    .inner-header .mobile-menu-toggle a span:nth-child(2) {width: 30px; top: 45px; left: 31px;}
+    .inner-header .mobile-menu-toggle a span:nth-child(3) {width: 30px; top: 55px; left: 31px;}
+    .inner-header .logo {top: 28%;}
+    .inner-header .logo a {width: 160px; height: 27px;}
+
+
+
+    .visual {padding:0; width: 100%;}
+    .visual .visual-inner {column-gap: 30%;}
+    .visual .visual-inner .middle {transform: scale(1.63) translateX(3%);}
+    .visual .visual-inner .middle_re {top: 48%; left: 57.5%; width: 9.5%;}
+    .visual .visual-inner .left_par, .visual .visual-inner .right_par {margin-top: 20%; transform: scale(1.2);}
+    .visual .visual-inner .left {column-gap: 58%;}
+    .visual .visual-inner .right {column-gap: 50%;}
+
+
+    .introduce {padding: 50px 0 98px;}
+    .introduce.close { margin-top: 215px;}
+    .introduce .introduce-inner {width: 99%;}
+    .introduce .introduce-inner h2 {font-size: 34px;}
+    .introduce .introduce-inner p {font-size: 16px;}
+    .introduce .introduce-inner p.txt span.fff {font-size: 16px;}
+
+    /* bombee */
+    .bombee {aspect-ratio: 390 /844; }
+    .bombee .bombee-inner {width: 90%; height: 100%; padding:107px 0;}
+    .bombee .bombee-inner .title {flex-direction: column;}
+    .bombee .bombee-inner .title h2.right {margin-right: 0%;}
+    .bombee .bombee-inner .imgBox {width: 62%; height: 55.5%; left: 50%; transform: translate(-50%, -50%);}
+    .bombee .bombee-inner .img {width: 45%; margin: 1% auto 8%;}
+
+    /* story */
+    .story {padding: 107px 30px; aspect-ratio: 390 / 2378;}
+    .story .story-inner {margin: 0;}
+
+    .story .story-inner .imgBox .img.story_1 {width:52.0667vw; left: 1%; top: 9%;}
+    .story .story-inner .imgBox .img.story_2 {width:84vw; top: 31%; right: 0%;}
+    .story .story-inner .imgBox .img.story_3 {width:50vw; bottom: 33.5%; left: 0;}
+    .story .story-inner .imgBox .img.story_4 {width:60vw;bottom: 7%; right: 0;}
+
+    .story .story-inner .title {top: 0;left: 0;}
+    .story .story-inner .story-tit {font-size: 160px;}
+    .story .story-inner .title .story-tit.love {top: 20%; left: 0%;}
+    .story .story-inner .title .story-tit.infused {top: 26.5%; right: 1%;}
+    .story .story-inner .title .story-tit.skins {bottom: 30%; left: 29%;}
+    .story .story-inner .title .story-tit.prestige {bottom: 23.5%; right: 0%;}
+    .story .story-inner .text .txt {font-size: 18px; letter-spacing: -0.06em; text-align: start;}
+    .story .story-inner .text .txt:nth-child(1) {top: 0%; left: 0%; }
+    .story .story-inner .text .txt:nth-child(2) {top: 45%; left: 0%;}
+    .story .story-inner .text .txt:nth-child(3) {bottom: 0%; left: 0%; text-align: start;}
+
+
+    /* ourstory */
+.our {aspect-ratio: 390 / 1673; padding: 100px 30px;} 
+.our-inner .tit {font-size: 32px; display: block; line-height: 110%; letter-spacing: -0.05em;}
+.our-inner .txt-box .top h2:nth-of-type(2) > span:first-child {margin: 8px 0}
+.our-inner .txt-box p.txt {margin-top: 20px; font-size: 18px;}
+.our-inner .txt-box .bottom {bottom: 25%; left: -5%; width: 100%;}
+.our-inner .txt-box .bottom p.txt {margin-top: 20px;}
+
+.our-inner .img-box>div {width: 100%;}
+.our-inner .img-box .top {top: 33%; right: 0;}
+.our-inner .img-box .bottom {bottom: 0%; left: 0;}
+
+    
+
+
+    /* ingredient */
+    .ingredient-inner .box .lesft h2 {font-size: 80px; width: fit-content}
+    .ingredient-inner .box .text {display: block; margin: 0 auto; width: 90%;}
+    .ingredient-inner .box .left {display: flex; justify-content: center;}
+    .ingredient-inner .box .left h2.name {display: inline-block; margin:0; line-height: 1;}
+    .ingredient-inner .box .right {width: 95%; display: block; justify-content: center; align-items: center; text-align: center;}
+    .ingredient-inner a:hover .box {padding-top: 300px; transition: all 0.3s; }
+    .ingredient-inner a:hover .box .img, .ingredient-inner a:focus .box .img {opacity: 1; transition: all 0.3s; transform: translate(-50%, -50%) scale(1); width: 200px;}
+    .ingredient-inner a:hover .box .text {margin-top: 68px;}
+    .ingredient-inner a:hover .box .text h2 {margin-bottom: 20px;}
+    .ingredient-inner a:hover .img {top:26%}
+    .ingredient-inner .box.rice .left span {top:74%; left:33%}
+    .ingredient-inner .box.eggplant .left span {top:70%; left:21%;}
+    .ingredient-inner .box.teatree .left span {top:71%; left:24%}
+    .ingredient-inner .box.Honey .left span {top:71%; left:27%}
+    .ingredient-inner .box.hyaluronic .left span {top:71%; left:15%}
+
+
+
+    /* history */ 
+    /* --- 공통 및 레이아웃 설정 --- */
+.history {display: flex; flex-wrap: wrap; overflow-x: none;}
+.history-inner {width: 92.31%; margin-left: 7.6923vw; aspect-ratio: 390 / 3769;}
+.history-inner ul li h2 {font-size: 30.7692vw; margin: 0 0 59px 51px;} 
+.history-inner ul li span.line {left: 5% !important;}
+.history-inner ul li h2 span {font-size: 70px ;}
+.history-inner ul li.y2025 .year h2 span {font-size: 150px; margin-left: 20px;}
+.history-inner ul li .left .txt-box {width: 290px;}
+.history-inner ul li .txt-box h3 {font-size: 7.6923vw; margin-left: 13.3333vw;}
+.history-inner ul li .txt-box h3 {margin-top: -60px;}
+.history-inner ul li .txt-box p {font-size: 4.1026vw; margin-left: 12.8462vw;}
+.history-inner ul li .txt-box a {margin: 6.6667vw 2.0513vw 5.8974vw; width: 5.1282vw; height: 5.1282vw;}
+.history-inner ul li, .history-inner ul li.y2016, .history-inner ul li.y2013 {margin-top: 70px;}
+.history-inner ul li span.line {height: 340%;}
+.history-inner ul li, .history-inner ul li.y2016, .history-inner ul li.y2013 {margin-top: 0;}
+.history-inner ul li.y2016 {padding-top: 50px;}
+.history-inner ul li.y2022 {padding-top: 110px;}
+.history-inner ul li.y2012 {padding-top: 50px;}
+/* --- 2025 --- */
+.history-inner ul li.y2025 span.line {top: 40% !important;}
+.history-inner ul li.y2025 .img a.left {width: 41.7256vw;}
+.history-inner ul li.y2025 .img a.right {width: 29.4872vw; height: 29.8641vw;}
+
+/* --- 2022 --- */
+.history-inner ul li.y2022 .img a.left {width: 31.2821vw;}
+.history-inner ul li.y2022 .img a.right {width: 40.4359vw; height:auto}
+
+/* --- 2016 --- */
+.history-inner ul li.y2016 .img a.left {width: 74.3590vw; height: auto; margin-bottom: 3.5128vw;}
+.history-inner ul li.y2016 .img a.top {width: 35.8205vw; height: 0}
+.history-inner ul li.y2016 .img a.bottom {height: 0}
+.history-inner ul li.y2016 .img a.bottom {width: 35.8205vw;}
+.history-inner ul li.y2016 .img .right {margin-top: 0;}
+.history-inner ul li.y2016 .img {margin-top: 0 !important;}
+
+/* --- 2013 --- */
+.history-inner ul li.y2013 {margin-top: 150px;}
+.history-inner ul li.y2013 .img a.left {width: 30.5128vw; height: auto;}
+.history-inner ul li.y2013 .img a.right {width: 38.7179vw; height: auto; margin: 0% 0 0 5%;}
+
+
+/* --- 2012 --- */
+.history-inner ul li.y2012 .img a.left {width: 42.0513vw; height: 49.4872vw;}
+.history-inner ul li.y2012 .img a.right {width: 29.4872vw; height: 42.3077vw;}
+
+
+    /* footer */
+    footer .top h3 {font-size: 92px;  padding-top: 0;}
+    footer .bottom {padding: 230px 20px 80px 20px; position: relative;}
+    footer .bottom .fo-ble {position: absolute; top: 20%; left: 25%; width: 195px; height: 109px;}
+    footer .bottom ul.left {width: 100%;}
+    footer .bottom ul li {font-size: 10px;}
+    footer .bottom ul.right {width: 60%; margin-left: 20px;} 
+    footer .bottom ul.right .contact {font-size: 16px; margin-bottom: 5px;}
+    .cus::after {content: "\A"; white-space: pre;}
+    footer .bottom ul.right .contact .cus {font-size: 12px;}
+    footer .bottom ul.right .contact .none {display: none;}
+    footer .bottom ul.right .time {font-size: 10px;}
+    }

@@ -1,0 +1,533 @@
+@charset "utf-8"; 
+
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 300; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none;}
+button:focus {outline: none;}
+
+/* 공통요소 */
+body {font-family: 'Pretendard', sans-serif; margin: 0 auto; font-weight: 300; color: #1A1A1E;}
+.tit {font-family: 'El Messiri', sans-serif; font-size: 60px; letter-spacing: -3%;}
+.txt {font-size: 20px;}
+.wrap {overflow: hidden; position: relative; line-height: 1.3;}
+
+section {margin: 0 auto 170px;}
+h2.tit {font-size: 50px; margin-bottom: 70px; text-align: center; font-weight: 500;}
+.bar {width: 41.5%; height: 3px; background: #CFCECC; display: block; margin: 0 auto;}
+.bar .b_bar {display: block; width: 25%; height: 3px; background: #1A1A1E;}
+.textBox {padding: 20px; width: 100%;}
+.textBox h3 {width: 100%; font-size: 16px; margin-bottom: 10px;}
+.textBox p {width: 100%; font-size: 22px; font-weight: 500;}
+
+/* header */
+@media screen and (max-width: 1400px){
+    .menuOpen {display: none;}
+}
+
+/* header */
+header {background: linear-gradient( rgba(26,26,30,0.4)0%, rgba(26,26,30,0)100%); width: 100%; height: 156px; position: absolute; left: 0; top: 0; z-index: 1000; transition: background 0.5s ease, height 0.5s ease;}
+header.scrolled {
+    background: #1A1A1E;
+    position: fixed;
+    height: 100px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+header.fixed-state {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient( rgba(26,26,30,0.4)0%, rgba(26,26,30,0)100%); 
+    transition: transform 0.4s ease, height 065s ease, background 0.5s ease;
+    z-index: 1000;
+}
+header.header-hidden {
+    transform: translateY(-100%);
+}
+header.fixed-state .inner-header nav {
+    padding: 39px 148px 70px;
+    align-items: center;
+}
+header.fixed-state .inner-header .logo {opacity: 1;}
+
+.inner-header {width: 100%; margin: 0 auto; align-items: center;  font-family: 'El Messiri', sans-serif; color: #EAEAEA; font-size: 16px; letter-spacing: -2%;}
+.inner-header .mobile-menu-toggle {display: none;}
+.inner-header nav {width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 39px 148px 70px;}
+.inner-header .gnb {width: 25%; display: flex; justify-content: space-between;}
+.inner-header .gnb a {display: block; width: 100%; height: 100%;}
+.inner-header .logo {
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    margin:0; 
+    z-index: 10;
+    opacity: 1; 
+    transition: opacity 0.4s ease;}
+    
+header.scrolled .inner-header .logo {
+    opacity: 1; 
+}
+.inner-header .logo a {display: block; width: 215px; height: 37px; cursor: pointer;}
+.inner-header .logo a img {width: 100%; height: 100%;}
+.inner-header .tnb {width: 10%; display: flex; justify-content: space-between;}
+.inner-header .tnb a {display: block; width: 100%; height: 100%;}
+.menuOpen {display: none;}
+
+
+/* visual */
+.visual {width: 100%; height: 93vh; overflow: hidden; color: #EAEAEA; position: relative;}
+.visual .inner {width: 100%; height: 100%;}
+.visual .inner>.img {width: 100%; height: 100%;}
+.visual .inner .img img {width: 100%; height: 100%; object-fit: cover; display: block; }
+.visual .inner .textBox {width: 100%; position: absolute; bottom: 5%; left: 50%; transform: translateX(-50%); text-align: center;}
+.visual .inner .textBox .top {margin-bottom: 80px; width: 100%;}
+.visual .inner .textBox .top h2 {width: 100%; margin: 0 auto 16px; font-family: "Cormorant Garamond", serif; font-size: 70px; font-weight: 400; font-style: italic;}
+.visual .inner .textBox .top .txt {font-size: 18px; font-weight: 200;}
+.visual .inner .textBox .bottom span {display: block; width: 110px; height: 1px; background: #EAEAEA; margin: 0 auto 16px;}
+.visual .inner .textBox .bottom .img {width: 23px; margin: 0 auto;}
+.visual .inner .textBox .bottom .img img {width: 100%;}
+
+
+/* bestSeller */
+/* .bestSeller {overflow: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.bestSeller .inner {padding: 100px 0;}
+
+.bestSeller .inner .list {display: flex; align-items: center; flex-wrap: nowrap; margin: 0 30px 70px; overflow-x:auto;
+    -webkit-overflow-scrolling: touch; 
+    scroll-behavior: smooth;
+    cursor : grab;
+    scroll-snap-type: x mandatory; 
+    scrollbar-width:none;
+} 
+.bestSeller .inner .list::-webkit-scrollbar{ display:none;} 
+.bestSeller .inner .list:active {cursor : grabbing;}
+.bestSeller .inner .list li{flex: 0 0 24.8%; margin-right: 12px; scroll-snap-align: start;}
+.bestSeller .inner .list a {display: block; width: 100%;}
+.bestSeller .inner .list .img {width: 100%;}
+.bestSeller .inner .list .img img {width: 100%;} */
+
+/* bestSeller */
+.bestSeller { overflow: hidden; }
+.bestSeller .inner { padding: 100px 0; }
+.bestSeller .best-swiper {overflow: hidden;}
+.bestSeller .list.swiper-wrapper {margin: 0 30px 70px; display: flex; align-items: center; flex-wrap: nowrap;}
+.bestSeller .swiper-slide {flex: 0 0 24.8%;}
+.bestSeller .swiper-slide a { display:block; width:100%; overflow: hidden;}
+.bestSeller .swiper-slide .img {position: relative; overflow: hidden;}
+.bestSeller .swiper-slide .img img { width:100%; display:block;}
+
+.bestSeller .list.swiper-wrapper .swiper-slide .img::after { content: ''; position: absolute; inset: 0; opacity: 0; z-index: 1; transition: opacity .3s ease;}
+
+
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(1) .img::after {background: url(../img/productMain/best_hover_1.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(1):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(1):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(2) .img::after {background: url(../img/productMain/best_hover_2.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(2):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(2):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(3) .img::after {background: url(../img/productMain/best_hover_3.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(3):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(3):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(4) .img::after {background: url(../img/productMain/best_hover_4.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(4):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(4):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(5) .img::after {background: url(../img/productMain/best_hover_5.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(5):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(5):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(6) .img::after {background: url(../img/productMain/best_hover_6.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(6):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(6):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(7) .img::after {background: url(../img/productMain/best_hover_7.mp4) no-repeat center/cover; width: 100%; height: 100%; object-fit: cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(7):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(7):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(8) .img::after {background: url(../img/productMain/best_hover_8.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(8):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(8):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(9) .img::after {background: url(../img/productMain/best_hover_9.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(9):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(9):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(10) .img::after {background: url(../img/productMain/best_hover_10.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(10):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(10):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(11) .img::after {background: url(../img/productMain/best_hover_11.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(11):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(11):focus .img::after {opacity: 1;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(12) .img::after {background: url(../img/productMain/best_hover_12.png) no-repeat center/cover;}
+.bestSeller .list.swiper-wrapper .swiper-slide:nth-child(12):hover .img::after, .bestSeller .list.swiper-wrapper .swiper-slide:nth-child(12):focus .img::after {opacity: 1;}
+
+/* bestSeller 공통 */
+.bestSeller .swiper-slide .img {
+  position: relative;
+  overflow: hidden;
+}
+
+.bestSeller .swiper-slide .img .hoverMedia {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .3s ease;
+  z-index: 2;
+}
+
+/* hover 시 */
+.bestSeller .swiper-slide:hover .img .hoverMedia,
+.bestSeller .swiper-slide:focus .img .hoverMedia {
+  opacity: 1;
+}
+
+/* 이미지 타입 hover */
+.bestSeller .swiper-slide .img .hoverImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 영상 hover */
+.bestSeller .swiper-slide .img .hoverVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* NewArrival */
+
+/* .NewArrival {overflow-y: hidden; overflow-x: auto; text-align: center;}
+.NewArrival .inner .NewArrival_box {display: flex; justify-content: space-between; align-items: center; background: #F7F6F2;}
+.NewArrival .inner .NewArrival_box>.img {width: 50%; overflow: hidden;}
+.NewArrival .inner .NewArrival_box>.img img {width: 100%;}
+.NewArrival .inner .NewArrival_box .list_box {width: 50%;}
+.NewArrival .inner .NewArrival_box .list_box .bar {width: 42%;}
+.NewArrival .inner .NewArrival_box .list_box .bar .b_bar {width: 16.66%;}
+.NewArrival .inner .NewArrival_box .list {display: flex; align-items: center; flex-wrap: nowrap; margin-bottom: 120px;}
+.NewArrival .inner .list li {flex: 0 0 100%;}
+.NewArrival .inner .list li a {display: block; width: 45%; margin: 0 auto;}
+.NewArrival .inner .list li a .img {width: 100%;}
+.NewArrival .inner .list li a .img img {width: 100%;} */
+
+
+/* 섹션 자체는 스크롤 주지 말기 (Swiper가 움직임) */
+.NewArrival { overflow: hidden; text-align: center; }
+.NewArrival .inner .NewArrival_box { display:flex; justify-content:space-between; align-items:center; background:#F7F6F2; }
+.NewArrival .inner .NewArrival_box > .img { width:50%; overflow:hidden; }
+.NewArrival .inner .NewArrival_box > .img img { width:100%; display:block; }
+
+.NewArrival .inner .NewArrival_box .list_box { width:50%; }
+
+/* Swiper 컨테이너 */
+.NewArrival .list-swiper { width:100%; overflow:hidden; }
+
+/* wrapper / slide는 Swiper가 기본으로 가로 정렬해줌 */
+.NewArrival .list.swiper-wrapper { margin-bottom: 7vw; display: flex; justify-content: space-between; align-items: center;} /* 필요하면만 */
+
+/* li 대신 swiper-slide로 잡기 */
+.NewArrival .swiper-slide { width:100%; } /* slidesPerView:1이면 굳이 없어도 됨 */
+.NewArrival .swiper-slide a { display:block; width:45%; margin:0 auto; }
+.NewArrival .swiper-slide a .img img { width:100%; display:block; }
+.NewArrival .bar {width: 42% ; position: relative; overflow:hidden; } 
+.NewArrival .b_bar{ width:16.66%; transition: width .3s ease; /* 위치 기준 이동용 */ }
+
+
+
+
+/* allProduct */
+
+.allProduct {margin: 0 auto;}
+.allProduct .inner .list_menu {display: flex; margin-left: 30px; margin-bottom: 24px;}
+.allProduct .inner .list_menu li {margin-right: 31px; position: relative; color: #A1A09F; font-size: 18px;}
+.allProduct .inner .list_menu li:nth-child(1) {color: #1A1A1E;}
+.allProduct .inner .list_menu li::after {content: ''; width: 1px; height: 18px; background: #A1A09F; position: absolute; right: -15px; top: 3px;}
+.allProduct .inner .list_menu li:nth-child(4)::after {opacity: 0;} 
+
+.allProduct .inner .list_product ul {display: flex; justify-content: space-between; align-items: stretch; flex-wrap: wrap;}
+.allProduct .inner .list_product ul li {flex: 0 0 25%;}
+.allProduct .inner .list_product ul li.b ul {display: flex; align-items: stretch;}
+.allProduct .inner .list_product li.veo {flex: 0 0 50%; overflow: hidden; display: flex;}
+.allProduct .inner .list_product li.veo .veo {width: 100%; height: 100%;}
+.allProduct .inner .list_product li.veo .veo video {width: 100%; height: 100%; object-fit: cover; display: block;}
+.allProduct .inner .list_product li ul li {background: linear-gradient(135deg,  #E1E1E1 0%, #F1F0F1 100%);position: relative;}
+.allProduct .inner .list_product li ul li a {
+  width: 100%;
+  display: block;
+  padding: 20px;
+  position: relative;   /* hover 오버레이 기준 */
+  overflow: hidden;
+}
+.allProduct .inner .list_product li ul li a .img {width: 100%;}
+.allProduct .inner .list_product li ul li a .img img {width: 100%;}
+.allProduct .inner .list_product li ul li a .textBox {padding: 0;}
+
+/* ---------------- PNG hover용 ::after 공통 ---------------- */
+.allProduct .inner .list_product li ul li a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity .25s ease;
+}
+
+/* line1 : 1~3만 이미지, 4번은 영상(video-target) */
+.allProduct .inner .list_product li.line1 ul li:nth-child(1) a::after {
+  background: url(../img/productMain/allProduct_hover_1.png) no-repeat center/cover;
+}
+.allProduct .inner .list_product li.line1 ul li:nth-child(2) a::after {
+  background: url(../img/productMain/allProduct_hover_2.png) no-repeat center/cover;
+}
+.allProduct .inner .list_product li.line1 ul li:nth-child(3) a::after {
+  background: url(../img/productMain/allProduct_hover_3.png) no-repeat center/cover;
+}
+/* 4번(hover_4.mp4)은 ::after 안 씀 */
+
+/* line2 : 1번 이미지, 2번은 영상 */
+.allProduct .inner .list_product li.line2 ul li:nth-child(1) a::after {
+  background: url(../img/productMain/allProduct_hover_5.png) no-repeat center/cover;
+}
+/* 2번(hover_6.mp4)은 ::after 안 씀 */
+
+/* line3 : 1,2,3 이미지고 4번은 영상 */
+.allProduct .inner .list_product li.line3 ul li:nth-child(1) a::after {
+  background: url(../img/productMain/allProduct_hover_7.png) no-repeat center/cover;
+}
+.allProduct .inner .list_product li.line3 ul li:nth-child(2) a::after {
+  background: url(../img/productMain/allProduct_hover_8.png) no-repeat center/cover;
+}
+.allProduct .inner .list_product li.line3 ul li:nth-child(3) a::after {
+  background: url(../img/productMain/allProduct_hover_9.png) no-repeat center/cover;
+}
+/* 4번(hover_10.mp4)은 ::after 안 씀 */
+
+/* line5 : 2,3만 이미지, 1/4는 영상 */
+.allProduct .inner .list_product li.line5 ul li:nth-child(2) a::after {
+  background: url(../img/productMain/allProduct_hover_12.png) no-repeat center/cover;
+}
+.allProduct .inner .list_product li.line5 ul li:nth-child(3) a::after {
+  background: url(../img/productMain/allProduct_hover_13.png) no-repeat center/cover;
+}
+/* 1번(hover_11.mp4), 4번(hover_14.mp4)은 ::after 안 씀 */
+
+/* line6 : 2,3 이미지, 1은 비디오 카드 자체 */
+.allProduct .inner .list_product li.line6 ul li:nth-child(2) a::after {
+  background: url(../img/productMain/allProduct_hover_15.png) no-repeat center/cover;
+}
+.allProduct .inner .list_product li.line6 ul li:nth-child(3) a::after {
+  background: url(../img/productMain/allProduct_hover_16.png) no-repeat center/cover;
+}
+
+/* line7 : 2,3,4 이미지, 1은 영상 */
+.allProduct .inner .list_product li.line7 ul li:nth-child(2) a::after {
+  background: url(../img/productMain/allProduct_hover_18.png) no-repeat center/cover;
+}
+.allProduct .inner .list_product li.line7 ul li:nth-child(3) a::after {
+  background: url(../img/productMain/allProduct_hover_19.png) no-repeat center/cover;
+}
+.allProduct .inner .list_product li.line7 ul li:nth-child(4) a::after {
+  background: url(../img/productMain/allProduct_hover_20.png) no-repeat center/cover;
+}
+
+/* PNG hover 효과 발동 */
+.allProduct .inner .list_product li ul li:hover > a::after,
+.allProduct .inner .list_product li ul li:focus-within > a::after {
+  opacity: 1;
+}
+
+/* ---------------- 비디오 hover용 공통 (.hoverMedia) ---------------- */
+.allProduct .list_product li ul li a .hoverMedia {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.allProduct .list_product li ul li a .hoverMedia video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* video overlay 보이게 */
+.allProduct .list_product li ul li:hover a .hoverMedia,
+.allProduct .list_product li ul li:focus-within a .hoverMedia {
+  opacity: 1;
+}
+
+/* turn 영역 */
+.allProduct .inner .list_product .turn {
+  width: 100%;
+  height: 1080px;
+  position: relative;
+  background: #F7F6F2;
+  display: block;
+}
+.allProduct .inner .list_product .turn .product {
+  width: 15%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+.allProduct .inner .list_product .turn .img img {width: 100%;}
+.allProduct .inner .list_product .turn .text {
+  line-height: 1080px;
+  width: 83%;
+  margin: 0 auto;
+}
+
+
+
+
+
+/* footer */
+footer .top h3 {font-size: 451px; font-family:'OT Neglige', sans-serif; line-height: 140%; letter-spacing: 2%; color: #EAEAEA; font-weight: normal; text-align: center; padding-top: 190px;}
+footer .bottom {width: 100%; display: flex; background: #24242C; padding: 100px 70px;}
+footer .bottom .fo-ble {display: inline-block; width: 407px; height: 228px; margin-right: 80px;}
+footer .bottom .fo-ble img {width: 100%;}
+footer .bottom ul {width: 30%;}
+footer .bottom ul li {font-size: 16px; color:#767676; line-height: 140%; letter-spacing: -2%;}
+footer .bottom ul.right {margin-left: 530px;}
+footer .bottom ul.right .contact {font-size: 24px; color: #DBDBDB;}
+footer .bottom ul.right .time {font-size: 16px; color: #DBDBDB;}
+
+
+/* 1024 ~ 769px */
+@media screen and (max-width : 1024px) {
+    .menuOpen {display: none;}
+    .inner-header nav {padding: 39px 65px 70px;}
+    header.fixed-state .inner-header nav {padding: 39px 65px 70px;}
+    .inner-header .gnb {width:30%;}
+    .inner-header .tnb {width: 15%;}
+
+
+    section {margin: 0 auto 95px;}
+    h2.tit {font-size: 32px; margin-bottom: 54px;}
+    .textBox {padding: 14px;}
+    .textBox h3 {font-size: 12px; margin-bottom: 10px;}
+    .textBox p {font-size: 16px; font-weight: 500;}
+    .bar {width: 49.5%; height: 2px;}
+    .NewArrival .bar {width: 48.5%;}
+    .NewArrival .list.swiper-wrapper {margin-bottom: 5vw;}
+
+
+    .visual {height: 55vh;}
+    .visual .inner .textBox .top h2 {font-size: 42px;}
+    .visual .inner .textBox .top .txt {font-size: 13px; font-weight: 200;}
+    .visual .inner .textBox .top {margin-bottom: 40px;}
+    .visual .inner .textBox .bottom span { width: 70px;}
+    .visual .inner .textBox .bottom .img {width: 12px;}
+    .allProduct .inner .list_menu li {font-size: 16px;}
+    .allProduct .inner .list_menu li::after {height: 16px; top: 1px;}
+
+    .bestSeller .inner {padding: 0 0 54px;}
+    .bestSeller .list.swiper-wrapper {margin: 0 30px 54px;}
+    .bestSeller .swiper-slide {flex: 0 0 33.2%;}
+    .allProduct .inner .list_product .turn {height: 570px;}
+    .allProduct .inner .list_product .turn .product {width: 16.5%; }
+    .allProduct .inner .list_product .turn .text {line-height: 570px;}
+    
+
+}
+
+/* 768 ~ 391px */   
+@media screen and (max-width : 768px) {
+    header .inner-header nav ul.gnb, header .inner-header nav ul.tnb {display: none;}
+    .inner-header {position: relative;}
+    .inner-header .mobile-menu-toggle {background: transparent; border: none; display: block; position: absolute; top: 0%; left: 0%;}
+    .inner-header .mobile-menu-toggle a {display: block; width: 50px; height: 50px;}
+    .inner-header .mobile-menu-toggle a span:nth-child(1) {width: 34px; height: 2px; position: absolute; top: 30px; left: 50px; background: #EAEAEA;}
+    .inner-header .mobile-menu-toggle a span:nth-child(2) {width: 34px; height: 2px; position: absolute; top: 40px; left: 50px; background: #EAEAEA;}
+    .inner-header .mobile-menu-toggle a span:nth-child(3) {width: 34px; height: 2px; position: absolute; top: 50px; left: 50px; background: #EAEAEA;}
+    .menuOpen {display: block;}
+    .menuOpen .menuWrap {width: 100%; height: 100vh; background: rgba(26, 26, 30, 0.8); z-index: 100; top: 0; right: 0; position: fixed;}
+    .menuOpen .menuWrap .close {display: block; width: 25px; height: 25px; position: absolute; right: 5%; top: 5%;}
+    .menuOpen .menuWrap .close img {width: 100%;}
+    .menuOpen .menuWrap .menu-tit {font-family: 'El Messiri', sans-serif; font-size: 28px; color: #EAEAEA; position: absolute; top: 30%; left: 50%; transform: translateX(-50%); text-align: center;}
+    .menuOpen .menuWrap .menu-tit li {margin-bottom: 10px;}
+    .menuOpen .menuWrap .menu-tit li a {display: inline-block; position: relative; transition: all 0.3s;}
+    .menuOpen .menuWrap .menu-tit li.menu-margin {margin-bottom: 30px;}
+    .menuOpen .menuWrap {width: 0%; opacity: 0; left: -100%; transition: all 0.6s;}
+    .menuOpen .menuWrap.on {width: 100%; opacity: 1; left: 0; transition: all 0.9s;}
+
+    section {margin: 0 auto 142px;}
+    h2.tit {font-size: 32px; margin-bottom: 48px; }
+    .textBox {padding: 14px;}
+    .textBox h3 {font-size: 16px; height: 33px;}
+    .textBox p {font-size: 20px;}
+    .bar {width: 66.3%;}
+    
+    
+    
+    .visual .inner .textBox {position: absolute; bottom: 5%; left: 10%; transform: translateX(0); text-align: left;}
+    .visual .inner .textBox .top h2 {font-size: 44px; line-height: 1.2;}
+    .visual .inner .textBox .bottom {display: inline-block;}
+    .visual .inner .textBox .top .txt {font-size: 14px; line-height: 1.5;}
+    .visual .inner .textBox .top {margin-bottom: 74px;}
+
+    .bestSeller .inner {padding: 0 0 48px;}
+    .bestSeller .list.swiper-wrapper {margin: 0 16px 48px;}
+    .bestSeller .swiper-slide {flex: 0 0 53.5%;}
+
+    .NewArrival .bar {width: 32.5%;}
+    .NewArrival .list.swiper-wrapper {margin-bottom: 12.5vw;}
+    .NewArrival .inner .NewArrival_box {flex-direction: column;}
+    .NewArrival .inner .NewArrival_box>.img {width: 100%; height: 803px;}
+    .NewArrival .inner .NewArrival_box>.img img {height: 100%; display: block; object-fit: cover; object-position: 50% 50%;}
+    .NewArrival .inner .NewArrival_box .list_box {width: 100%; height: 803px; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+
+
+
+    .allProduct .inner .list_menu {margin-left: 0px; justify-content: center;}
+    .allProduct .inner .list_menu li {font-size: 16px;}
+    .allProduct .inner .list_menu li::after {height: 16px; top: 1px;}
+    .allProduct .inner .list_product .turn {height: 1050px;}
+    .allProduct .inner .list_product .turn .product {width: 24.5%; margin: 0 auto; left: 50%;}
+    .allProduct .inner .list_product .turn .text {line-height: 1050px;}
+
+    .allProduct .inner .list_product ul li {flex: 0 0 50%;}
+    .allProduct .inner .list_product li.veo {flex: 0 0 100%;}
+}
+
+/* 390px */
+@media screen and (max-width : 390px) {
+    header .inner-header nav ul.gnb, header .inner-header nav ul.tnb {display: none;}
+    .inner-header {position: relative;}
+    .inner-header .mobile-menu-toggle {background: transparent; border: none; display: block; position: absolute; top: 0%; left: 0%;}
+    .inner-header .mobile-menu-toggle a {display: block; width: 50px; height: 50px;}
+    .inner-header .mobile-menu-toggle a span:nth-child(1) {width: 18px; height: 2px; position: absolute; top: 28px; left: 50px; background: #EAEAEA;}
+    .inner-header .mobile-menu-toggle a span:nth-child(2) {width: 18px; height: 2px; position: absolute; top: 38px; left: 50px; background: #EAEAEA;}
+    .inner-header .mobile-menu-toggle a span:nth-child(3) {width: 18px; height: 2px; position: absolute; top: 48px; left: 50px; background: #EAEAEA;}
+
+
+    section {margin: 0 auto 80px;}
+    h2.tit {font-size: 22px; margin-bottom: 36px; }
+    .textBox {padding: 16px 0 0 0;}
+    .textBox h3 {font-size: 13px; margin-bottom: 6px;}
+    .textBox p {font-size: 16px;}
+    .bar {width: 65.5%;}
+    
+    .visual {height: 78vh;}
+    .visual .inner .textBox {bottom: 5%; left: 16px;}
+    .visual .inner .textBox .top h2 {font-size: 38px; line-height: 1;}
+    .visual .inner .textBox .bottom {display: inline-block;}
+    .visual .inner .textBox .top .txt {font-size: 12px; line-height: 1.5;}
+    .visual .inner .textBox .top {margin-bottom: 82px;}
+
+    .bestSeller .inner {padding: 0 0 48px;}
+    .bestSeller .list.swiper-wrapper {margin: 0 16px 36px;}
+    .bestSeller .swiper-slide {flex: 0 0 47.5%;}
+
+    .NewArrival .bar {width: 63%;}
+    .NewArrival .list.swiper-wrapper {margin-bottom: 14vw;}
+    .NewArrival .inner .NewArrival_box>.img {width: 100%; height: 441px;}
+    .NewArrival .inner .NewArrival_box .list_box {height: 441px;}
+
+
+    .allProduct .inner .list_menu li {font-size: 13px;}
+    .allProduct .inner .list_menu li::after {height: 13px; top: 1px;}
+    .allProduct .inner .list_product .turn {height: 532px;} 
+    .allProduct .inner .list_product .turn .product {width: 24.5%; margin: 0 auto; left: 50%;}
+    .allProduct .inner .list_product .turn .text {line-height: 532px;}
+
+    .allProduct .inner .list_product ul li {flex: 0 0 50%;}
+    .allProduct .inner .list_product li.veo {flex: 0 0 100%;}
+}

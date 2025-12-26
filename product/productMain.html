@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductMain</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="js/jquery.simplyscroll.min.js"></script>
+    <script src="js/splitting.min.js"></script>
+
+    <link rel="stylesheet" href="css/productMain.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="inner-header">
+                <div class="menuOpen">
+                    <button class="mobile-menu-toggle">
+                        <a href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </button>
+                    <div class="menuWrap">
+                        <a href="#" class="close"><img src="img/close.png" alt=""></a>
+                        <ul class="menu-tit">
+                            <li><a href="../brand/brand.html"><span><b>Brand</b></span></a></li>
+                            <li><a href="productMain.html"><span><b>Product</b></span></a></li>
+                            <li><a href="#"><span><b>Evnet</b></span></a></li>
+                            <li class="menu-margin"><a href="#"><span><b>Contact</b></span></a></li>
+                            <li><a href="#"><span><b>My page</b></span></a></li>
+                            <li><a href="#"><span><b>Cart</b></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="gnb">
+                        <li><a href="../brand/brand.html">Brand</a></li>
+                        <li><a href="productMain.html">Product</a></li>
+                        <li><a href="#">Event</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <h1 class="logo"><a href="../index.html"><img src="img/mainlogo_white.png" alt=""></a></h1>
+                    <ul class="tnb">
+                        <li><a href="#">My page</a></li>
+                        <li><a href="#">Cart</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header> 
+
+        <!-- visual -->
+         <section class="visual">
+            <div class="inner">
+                <p class="img"><img src="img/productMain/visualMain.png" alt=""></p>
+                <div class="textBox">
+                    <div class="top">
+                        <h2>Embracing beauty that begins in nature</h2>
+                        <p class="txt">자연에서 시작된 아름다움이<br>시간과 일상 속에서 천천히 스며들어 나를 더욱 빛나게 합니다.</p>
+                    </div>
+                    <div class="bottom">
+                        <span class="visual-bar"></span>
+                        <p class="img"><img src="img/productMain/visual-p.png" alt=""></p>
+                    </div>
+                </div>
+            </div>
+            
+        </section> 
+        
+        <!-- bestSeller -->
+        <section class="bestSeller">
+            <div class="inner">
+                <h2 class="tit">Best seller</h2>
+                <div class="swiper best-swiper">
+                    <div class="list swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="../detail/detail.html">
+                                <p class="img">
+                                    <img src="img/productMain/best_1.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>블레미쉬 효소 파우더 클렌저 50g</h3>
+                                    <p>₩ 18,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="../detail/detail.html">
+                                <p class="img">
+                                    <img src="img/productMain/best_2.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>티트리 컨트롤 패드</h3>
+                                    <p>₩ 25,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="../detail/detail.html">
+                                <p class="img">
+                                    <img src="img/productMain/best_3.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>마데케어 연고 33g</h3>
+                                    <p>₩ 22,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="../detail/detail.html">
+                                <p class="img">
+                                    <img src="img/productMain/best_4.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>노블 랏 리프팅 앰플 30ml</h3>
+                                    <p>₩ 35,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <p class="img">
+                                    <img src="img/productMain/best_5.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>블레미쉬 세럼 + 크림 SET</h3>
+                                    <p>₩ 66,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <p class="img">
+                                    <img src="img/productMain/best_6.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>티트리 컨트롤 클렌징폼 120ml</h3>
+                                    <p>₩ 12,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <p class="img">
+                                    <img src="img/productMain/best_7.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>블레미쉬 효소 파우더 클렌저 50g</h3>
+                                    <p>₩ 18,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <p class="img">
+                                    <img src="img/productMain/best_8.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>노블 랏 에센스 + 앰플 SET</h3>
+                                    <p>₩ 67,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <p class="img">
+                                    <img src="img/productMain/best_9.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>가지 클리어닝 머드 크림 마스크 100ml</h3>
+                                    <p>₩ 15,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <p class="img">
+                                    <img src="img/productMain/best_10.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>블레미쉬 세럼 150ml</h3>
+                                    <p>₩ 28,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <p class="img">
+                                    <img src="img/productMain/best_11.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>티트리 컨트롤 스킨 200ml</h3>
+                                    <p>₩ 16,000</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <p class="img">
+                                    <img src="img/productMain/best_12.png" alt="">
+                                </p>
+                                <div class="textBox">
+                                    <h3>가지 클리어링 앰플 150ml</h3>
+                                    <p>₩ 25,000</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <span class="bar"><span class="b_bar"></span></span>
+            </div>
+        </section>
+
+        <!-- NewArrival -->
+        <section class="NewArrival">
+            <div class="inner">
+                <h2 class="tit">New arrival</h2>
+                <div class="NewArrival_box">
+                    <p class="img">
+                        <img src="img/productMain/NewArrival_left_img.png" alt="">
+                    </p>
+                    <div class="list_box">
+                        <div class="swiper list-swiper">
+                            <div class="list swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <p class="img"><img src="img/productMain/NewArrival_right_p1.png" alt=""></p>
+                                        <div class="textBox">
+                                            <h3>봄비 세럼 50ml</h3>
+                                            <p>₩ 20,000</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <p class="img"><img src="img/productMain/NewArrival_right_p2.png" alt=""></p>
+                                        <div class="textBox">
+                                            <h3>봄비 허니 마스크팩 25g 10SET</h3>
+                                            <p>₩ 20,000</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <p class="img"><img src="img/productMain/NewArrival_right_p3.png" alt=""></p>
+                                        <div class="textBox">
+                                            <h3>봄비 수분크림 50ml</h3>
+                                            <p>₩ 25,000</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <p class="img"><img src="img/productMain/NewArrival_right_p4.png" alt=""></p>
+                                        <div class="textBox">
+                                            <h3>봄비 선크림 50ml</h3>
+                                            <p>₩ 18,000</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <p class="img"><img src="img/productMain/NewArrival_right_p5.png" alt=""></p>
+                                        <div class="textBox">
+                                            <h3>봄비 토너 200ml</h3>
+                                            <p>₩ 32,000</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <p class="img"><img src="img/productMain/NewArrival_right_p6.png" alt=""></p>
+                                        <div class="textBox">
+                                            <h3>봄비 클렌저 120ml</h3>
+                                            <p>₩ 20,000</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="bar"><span class="b_bar"></span></span>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- allProduct -->
+         <section class="allProduct">
+            <div class="inner">
+                <ul class="list_menu">
+                    <li><a href="#">제품 모두 보기</a></li>
+                    <li><a href="#">라인별</a></li>
+                    <li><a href="#">고민별</a></li>
+                    <li><a href="#">카테고리별</a></li>
+                </ul>
+                <ul class="list_product">
+                    <li class="line1 a">
+                        <ul class="a">
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_1.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>블레미쉬 효소 파우더 클렌저 50g</h3>
+                                        <p>₩ 18,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_2.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>블레미쉬 세럼 150ml</h3>
+                                        <p>₩ 28,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_3.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>블레미쉬 세럼 + 크림 SET</h3>
+                                        <p>₩ 66,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_4.png" alt="" class="video-target">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>블레미쉬 립 세럼 3.5ml</h3>
+                                        <p>₩ 15,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="line2 b">
+                        <ul class="a">
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_5.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>노블 랏 리프팅 에센스 200ml</h3>
+                                        <p>₩ 32,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_6.png" alt="" class="video-target">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>노블 랏 리프팅 크림 100ml</h3>
+                                        <p>₩ 42,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="veo">
+                                <p class="veo"><video autoplay muted loop playsinline preload="auto"><source src="img/productMain/allProduct_video1.mp4"></video></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="line3 a">
+                        <ul class="a">
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_7.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>봄비 수분크림 50ml</h3>
+                                        <p>₩ 25,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_8.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>봄비 선크림 50ml</h3>
+                                        <p>₩ 18,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_9.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>봄비 토너 200ml</h3>
+                                        <p>₩ 32,0000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_10.png" alt="" class="video-target">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>봄비 허니 마스크팩 25g 10SET</h3>
+                                        <p>₩ 20,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="line4 turn">
+                        <p class="img product"><img src="img/productMain/allProduct_turn_product.png" alt=""></p>
+                        <p class="img text"><img src="img/productMain/allProduct_turn_text.svg" alt=""></p>
+                    </li>
+                    <li class="line5 a">
+                        <ul class="a">
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_11.png" alt="" class="video-target">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>티트리 컨트롤 시카 앰플 30ml</h3>
+                                        <p>₩ 25,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_12.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>티트리 컨트롤 패드</h3>
+                                        <p>₩ 25,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_13.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>티트리 컨트롤 스킨 200ml</h3>
+                                        <p>₩ 16,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_14.png" alt="" class="video-target">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>티트리 컨트롤 에멀전 150ml</h3>
+                                        <p>₩ 16,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="line6 b">    
+                        <ul class="a">
+                            <li class="veo">
+                                <p class="veo"><video autoplay muted loop playsinline preload="auto"><source src="img/productMain/allProduct_video2.mp4"></video></p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_15.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>리얼 센텔라 시카 에어리 매트 세범 선스틱</h3>
+                                        <p>₩ 20,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_16.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>리얼 센텔라 시카 크림 리페어 마스크 10SET</h3>
+                                        <p>₩ 27,000 </p>
+                                    </div>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="line7 a">
+                        <ul class="a">
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_17.png" alt="" class="video-target">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>블레미쉬 효소 파우더 클렌저 50g</h3>
+                                        <p>₩ 18,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_18.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>가지 클리어링 앰플 150ml</h3>
+                                        <p>₩ 25,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_19.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>가지 클리어링 필링 패드 토너</h3>
+                                        <p>₩ 25,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p class="img">
+                                        <img src="img/productMain/allProduct_20.png" alt="">
+                                    </p>
+                                    <div class="textBox">
+                                        <h3>가지 클리어닝 머드 크림 마스크 100ml</h3>
+                                        <p>₩ 15,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+         </section>
+
+         <!-- footer -->
+        <footer>
+            <div class="top">
+                <h3>PAPA RECIPE</h3>
+            </div> 
+            <div class="bottom">
+                <video class="fo-ble" autoplay muted loop playsinline><source src="img/footer.mp4"></video>
+                <ul class="left">
+                    <li>주식회사 에어비티아시아</li>
+                    <li>대표 | 김도균</li>
+                    <li>본사 | 서울 강남구 언주로 537 에이비티타워 537</li>
+                    <li>통신판매업신고 | 제2020-서울강남-01058호</li>
+                    <li>사업자등록번호 | 418-81-54972</li>
+                    <li>@Copyright 2025 Papa Recipe</li>
+                </ul>
+                <ul class="right">
+                    <li class="contact">고객센터 | 070.4217.2827</li>
+                    <li class="time">상담시간 | 10:00~18:00</li>
+                    <li>토요일, 일요일 및 공휴일 제외</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/productMain.js"></script>
+</body>
+</html>
