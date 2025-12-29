@@ -298,6 +298,7 @@ overflow: hidden;}
     right: 5%;
     padding-top: 17px;
     opacity: 0.5;
+    z-index: 10000;
 }
 
 

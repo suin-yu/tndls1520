@@ -503,7 +503,7 @@ header.hide {transform: translateY(-100%);}
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/arrow-1.svg);
+    background-image: url(../img/arrow-1.JPG);
     background-repeat: no-repeat;
     background-position: 50% 28%;
     position: fixed;
@@ -511,6 +511,7 @@ header.hide {transform: translateY(-100%);}
     right: 5%;
     padding-top: 17px;
     opacity: 0.5;
+    z-index: 10000;
 }
 
 
