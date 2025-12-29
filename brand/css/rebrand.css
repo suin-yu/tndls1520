@@ -492,6 +492,29 @@ header.hide {transform: translateY(-100%);}
 .sherpa .sherpa-inner .text.animate.animated {opacity: 1;transform: translateY(0);transition-delay: 0.3s;}
 
 
+.topBtn {
+    background: #454554;
+    display: block;
+    width: 64px;
+    height: 64px;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/arrow-1.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 28%;
+    position: fixed;
+    bottom: 8%;
+    right: 5%;
+    padding-top: 17px;
+    opacity: 0.5;
+}
+
+
+
+
 
 /* footer */
 footer {width: 100%; margin: 0 auto;}
