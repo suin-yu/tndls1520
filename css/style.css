@@ -266,6 +266,8 @@ overflow: hidden;}
 .day6 .day-inner .left h2.tit {font-size: 38px; color:#1A1A1E; font-weight: 300;}
 .day6 .day-inner .left p.txt {color:#747273; margin-top: 10px;}
 .day6 .day-inner .left p.txt br {display: none;}
+.day6 .day-inner .left p.txt b {display: block;}
+
 
 .day6 .day-inner .left p.txt span {color: #747273 !important;}
 .day6 .day-inner .right {width: 60%; margin-top: 100px;}
