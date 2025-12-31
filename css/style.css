@@ -318,8 +318,9 @@ footer .bottom ul.right {margin-left: 400px;}
 footer .bottom ul.right .contact {font-size: 24px; color: #DBDBDB;}
 footer .bottom ul.right .contact .none {display: inline-block;}
 footer .bottom ul.right .time {font-size: 16px; color: #DBDBDB;}
+footer .bottom ul.right .img_pop {width: 70px; height: 30px; font-size: 14px; color: #c4c4c4;}
 
-
+footer .bottom ul.right input {font-size: 14px; background: #3C3C3C; width: 186px; height: 35px; text-align: center; padding: 4px 0px 6px; color: #c4c4c4; margin-top: 10px; cursor: pointer; border: none; text-align: center;}
 
 @keyframes textAni {
     0% {opacity: 0;}

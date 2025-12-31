@@ -588,4 +588,6 @@
     footer .bottom ul.right .contact .cus {font-size: 12px;}
     footer .bottom ul.right .contact .none {display: none;}
     footer .bottom ul.right .time {font-size: 10px;}
+    footer .bottom ul.right input { width: 120px; padding: 0; font-size: 10px;} 
+
     }

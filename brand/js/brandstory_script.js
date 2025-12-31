@@ -1,3 +1,6 @@
+
+
+
 // header footer
 window.addEventListener('load', () => {
   // 1. 헤더 로직
@@ -10,6 +13,15 @@ window.addEventListener('load', () => {
       else header.classList.remove('hide');
       lastY = currY;
   }, { passive: true });
+
+// 팝업
+  function showPopup() {
+    const url = "../imgBy.html";
+    const name = "이미지출처";
+    const specs = "width=680, height=600, left=200, top=100";
+    
+    window.open(url, name, specs);
+}
 
   // 2. 푸터 로직
   const footerH3 = document.querySelector('footer .top h3');

@@ -2,6 +2,16 @@ $(document).on('click', 'a[href="#"]:not(.topBtn)', function(e){
     e.preventDefault();
 });
 
+//팝업
+function showPopup() {
+    const url = "../imgBy.html";
+    const name = "이미지출처";
+    const specs = "width=680, height=600, left=200, top=100";
+    
+    window.open(url, name, specs);
+}
+
+
 // 라이브러리 초기화
 $(function() {
     $('.animate').scrolla({ mobile: true, once: false });
