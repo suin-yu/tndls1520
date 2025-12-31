@@ -4,7 +4,7 @@ $(document).on('click', 'a[href="#"]:not(.topBtn)', function(e){
 
 //팝업
 function showPopup() {
-    const url = "popup/imgBy.html";
+    const url = "https://solsol3318.github.io/ssol/imgBy.html";
     const name = "이미지출처";
     const specs = "width=680, height=600, left=200, top=100";
     
